@@ -40,12 +40,31 @@ button{
     border-bottom: 3px solid;
     @include theme('border-color',$color2);
     margin: 0 auto;
-    .logo{
-      // transform: scale(.25);
-      transition: ease-in-out 1s;
-      &:hover,&:focus{
+    .navbar-brand{
+      display: flex;
+      .logo{
+        // transform: scale(.25);
         transition: ease-in-out 1s;
-        // some animation here
+        &:hover,&:focus{
+          transition: ease-in-out 1s;
+          // some animation here
+        }
+        &-name{
+          display: inline-flex;
+          flex-direction: column;
+          margin-left: 20px;
+          .main-text{
+            font-size: 24px;
+            text-align: center;
+            font-weight: 600;
+          }
+          .sub-text{
+            text-align: center;
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 1em;
+          }
+        }
       }
     }
     .navbar-toggler.collapsed,.navbar-toggler{
@@ -137,8 +156,8 @@ button{
             display: block;
             position: relative;
             width:fill;
-            bottom: -11px;
-            height: 10px;
+            bottom: -16px; 
+            height: 7px;
             transform: scaleX(0%);
           }
         }

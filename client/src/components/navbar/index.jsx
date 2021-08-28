@@ -14,6 +14,14 @@ export default function Navbar(props) {
         <Container>
             <NavbarBootstrap.Brand href="/">
                 <Logo className="logo"/>
+                <div className='logo-name'>
+                    <div className='main-text'>
+                        United Communication
+                    </div>
+                    <div className='sub-text'>
+                        Enterprise
+                    </div>
+                </div>
             </NavbarBootstrap.Brand> 
             <NavbarBootstrap.Toggle aria-controls="responsive-navbar-nav" />
             <NavbarBootstrap.Collapse id="responsive-navbar-nav">

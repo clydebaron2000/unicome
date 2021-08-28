@@ -85,12 +85,35 @@ button {
   }
 }
 
-.navbar .container .logo {
+.navbar .container .navbar-brand {
+  display: flex;
+}
+
+.navbar .container .navbar-brand .logo {
   transition: ease-in-out 1s;
 }
 
-.navbar .container .logo:hover, .navbar .container .logo:focus {
+.navbar .container .navbar-brand .logo:hover, .navbar .container .navbar-brand .logo:focus {
   transition: ease-in-out 1s;
+}
+
+.navbar .container .navbar-brand .logo-name {
+  display: inline-flex;
+  flex-direction: column;
+  margin-left: 20px;
+}
+
+.navbar .container .navbar-brand .logo-name .main-text {
+  font-size: 24px;
+  text-align: center;
+  font-weight: 600;
+}
+
+.navbar .container .navbar-brand .logo-name .sub-text {
+  text-align: center;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 1em;
 }
 
 .navbar .container .navbar-toggler.collapsed, .navbar .container .navbar-toggler {
@@ -194,8 +217,8 @@ button {
   display: block;
   position: relative;
   width: fill;
-  bottom: -11px;
-  height: 10px;
+  bottom: -16px;
+  height: 7px;
   transform: scaleX(0%);
 }
 
