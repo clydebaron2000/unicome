@@ -22,32 +22,65 @@ button{
   @include theme('border-color',$color1);
   @include theme('color',$color1);
 } 
-.navbar{ 
+.navbar{  
   padding:0;
-  @include theme('background-color', $background3);
-  opacity: .85;
-  backdrop-filter: blur(5px);
+  @include theme('background-color', $background3 ,$a:.85);
+  // opacity: .5;
+  backdrop-filter: blur(2px);
+  // filter: blur(5px);
+  /* Note: backdrop-filter has minimal browser support */
   padding:0px 15px;
   margin-bottom: 0px;
-  // display: grid;
+  // display: grid;  
   // grid-template-columns: repeat(12,1fr);
   // gri
-  .container{
+  .container{ 
+    opacity: 1;
     display: flex;
-    flex-direction: row;
+    flex-direction: row; 
     justify-content: space-between;
     max-width: 1080px;
     border-bottom: 3px solid;
     @include theme('border-color',$color2);
     margin: 0 auto;
     .navbar-brand{
-      display: flex;
+      display: flex; 
       .logo{
         // transform: scale(.25);
-        transition: ease-in-out 1s;
-        &:hover,&:focus{
-          transition: ease-in-out 1s;
-          // some animation here
+        #logo{
+          #background{
+            @include theme('fill',$color1);
+          } 
+          #Fire{
+            @include theme('fill',$text3);
+          } 
+          #border{
+            @include theme('fill',$text3);
+          } 
+          &:hover,&:focus{
+            #background{
+              transition: ease-in-out all .5s;
+              // @include theme('fill',$text3);
+            }
+            #border{
+              transition: ease-in-out all .5s;
+              // @include theme('fill',$color1);
+            }
+            #Fire{
+              transition: ease-in-out all .5s;
+              animation: fire 1s infinite;
+              animation-direction: alternate;
+              @keyframes fire {
+                0%{
+                  @include theme('fill',$text3);
+                }
+                100%{
+                  @include theme('fill',$color2);
+                }
+              }
+              @include theme('fill',$text3);
+            }
+          }
         }
         &-name{
           display: inline-flex;
@@ -89,6 +122,7 @@ button{
       transition: ease-in-out .5s;
       .navbar-toggler-icon{
         transition: ease-in-out .5s;
+
         // background-image: url("../media/images/Minus.svg");
         color:white;
         &:hover,&:focus{
@@ -166,7 +200,8 @@ button{
           content: "";
           border-width: 1px;
           border-style: solid;
-          @include theme('border-color',$color2)
+          @include theme('border-color',$color2);
+          @include theme('background-color',$color2);
         }
       }
     }

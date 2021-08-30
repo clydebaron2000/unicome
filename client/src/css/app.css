@@ -9,21 +9,21 @@ button {
 }
 
 .action-button {
-  background-color: #ffa34b ;
-  color: #ffffff ;
+  background-color:  #ffa34b ;
+  color:  white ;
   padding: 3px 15px;
   border-radius: 50px;
 }
 
 @media (prefers-color-scheme: dark) {
   .action-button {
-    background-color: #ffa34b ;
+    background-color:  #ffa34b ;
   }
 }
 
 @media (prefers-color-scheme: dark) {
   .action-button {
-    color: #ffffff ;
+    color:  white ;
   }
 }
 
@@ -31,57 +31,58 @@ button {
   padding: 10px;
   border-radius: 5px;
   border: 1px solid;
-  background-color: #ffffff ;
-  border-color: #573697 ;
-  color: #573697 ;
+  background-color:  white ;
+  border-color:  #573697 ;
+  color:  #573697 ;
 }
 
 @media (prefers-color-scheme: dark) {
   .minor-button {
-    background-color: #ffffff ;
+    background-color:  white ;
   }
 }
 
 @media (prefers-color-scheme: dark) {
   .minor-button {
-    border-color: #573697 ;
+    border-color:  #573697 ;
   }
 }
 
 @media (prefers-color-scheme: dark) {
   .minor-button {
-    color: #573697 ;
+    color:  #573697 ;
   }
 }
 
 .navbar {
   padding: 0;
-  background-color: #4f4f4f ;
-  opacity: .85;
-  backdrop-filter: blur(5px);
+  background-color:  rgba(87, 54, 151, 0.85) ;
+  backdrop-filter: blur(2px);
+  /* Note: backdrop-filter has minimal browser support */
   padding: 0px 15px;
   margin-bottom: 0px;
 }
 
 @media (prefers-color-scheme: dark) {
   .navbar {
-    background-color: #573697 ;
+    background-color:  rgba(87, 54, 151, 0.85) ;
   }
 }
 
 .navbar .container {
+  opacity: 1;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   max-width: 1080px;
   border-bottom: 3px solid;
-  border-color: #ffa34b ;
+  border-color:  #ffa34b ;
   margin: 0 auto;
 }
 
 @media (prefers-color-scheme: dark) {
   .navbar .container {
-    border-color: #ffa34b ;
+    border-color:  #ffa34b ;
   }
 }
 
@@ -89,12 +90,70 @@ button {
   display: flex;
 }
 
-.navbar .container .navbar-brand .logo {
-  transition: ease-in-out 1s;
+.navbar .container .navbar-brand .logo #logo #background {
+  fill:  #573697 ;
 }
 
-.navbar .container .navbar-brand .logo:hover, .navbar .container .navbar-brand .logo:focus {
-  transition: ease-in-out 1s;
+@media (prefers-color-scheme: dark) {
+  .navbar .container .navbar-brand .logo #logo #background {
+    fill:  #573697 ;
+  }
+}
+
+.navbar .container .navbar-brand .logo #logo #Fire {
+  fill:  white ;
+}
+
+@media (prefers-color-scheme: dark) {
+  .navbar .container .navbar-brand .logo #logo #Fire {
+    fill:  white ;
+  }
+}
+
+.navbar .container .navbar-brand .logo #logo #border {
+  fill:  white ;
+}
+
+@media (prefers-color-scheme: dark) {
+  .navbar .container .navbar-brand .logo #logo #border {
+    fill:  white ;
+  }
+}
+
+.navbar .container .navbar-brand .logo #logo:hover #background, .navbar .container .navbar-brand .logo #logo:focus #background {
+  transition: ease-in-out all .5s;
+}
+
+.navbar .container .navbar-brand .logo #logo:hover #border, .navbar .container .navbar-brand .logo #logo:focus #border {
+  transition: ease-in-out all .5s;
+}
+
+.navbar .container .navbar-brand .logo #logo:hover #Fire, .navbar .container .navbar-brand .logo #logo:focus #Fire {
+  transition: ease-in-out all .5s;
+  animation: fire 1s infinite;
+  animation-direction: alternate;
+  fill:  white ;
+}
+
+@keyframes fire {
+  0% {
+    fill:  white ;
+    @media (prefers-color-scheme: dark) {
+      fill:  white ;
+    }
+  }
+  100% {
+    fill:  #ffa34b ;
+    @media (prefers-color-scheme: dark) {
+      fill:  #ffa34b ;
+    }
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .navbar .container .navbar-brand .logo #logo:hover #Fire, .navbar .container .navbar-brand .logo #logo:focus #Fire {
+    fill:  white ;
+  }
 }
 
 .navbar .container .navbar-brand .logo-name {
@@ -190,7 +249,7 @@ button {
 
 .navbar .container #responsive-navbar-nav .navbar-nav a {
   transition: ease-in-out all 1s;
-  color: #cacaca ;
+  color:  #cacaca ;
   margin: auto;
   margin: 0 20px;
   text-align: center;
@@ -201,7 +260,7 @@ button {
 
 @media (prefers-color-scheme: dark) {
   .navbar .container #responsive-navbar-nav .navbar-nav a {
-    color: #cacaca ;
+    color:  #cacaca ;
   }
 }
 
@@ -213,7 +272,7 @@ button {
 .navbar .container #responsive-navbar-nav .navbar-nav a::after {
   transition: ease-in-out all .25s;
   content: "";
-  background-color: #ffa34b ;
+  background-color:  #ffa34b ;
   display: block;
   position: relative;
   width: fill;
@@ -224,7 +283,7 @@ button {
 
 @media (prefers-color-scheme: dark) {
   .navbar .container #responsive-navbar-nav .navbar-nav a::after {
-    background-color: #ffa34b ;
+    background-color:  #ffa34b ;
   }
 }
 
@@ -233,12 +292,19 @@ button {
   content: "";
   border-width: 1px;
   border-style: solid;
-  border-color: #ffa34b ;
+  border-color:  #ffa34b ;
+  background-color:  #ffa34b ;
 }
 
 @media (prefers-color-scheme: dark) {
   .navbar .container #responsive-navbar-nav .navbar-nav::after {
-    border-color: #ffa34b ;
+    border-color:  #ffa34b ;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .navbar .container #responsive-navbar-nav .navbar-nav::after {
+    background-color:  #ffa34b ;
   }
 }
 
@@ -281,21 +347,21 @@ button {
 }
 
 .hero.home {
-  color: #000505 ;
+  color:  #000505 ;
 }
 
 @media (prefers-color-scheme: dark) {
   .hero.home {
-    color: #000505 ;
+    color:  #000505 ;
   }
 }
 
 .hero.home .background {
-  background-color: #573697 ;
+  background-color:  #573697 ;
 }
 
 @media (prefers-color-scheme: dark) {
   .hero.home .background {
-    background-color: #573697 ;
+    background-color:  #573697 ;
   }
 }

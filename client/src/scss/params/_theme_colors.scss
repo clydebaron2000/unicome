@@ -27,7 +27,7 @@ $themes:(
     $text3:        #ffffff,
     $background1:  #ffffff,
     $background2:  #b5b5b5,
-    $background3:  #4f4f4f,
+    $background3:  #573697,
   ),
   $dark-theme:( //modify this bc we have darkmode lel
     $color1:       #573697,
@@ -51,19 +51,17 @@ $themes:(
   )
 );
 
-@mixin themeProperty($theme, $property, $color, $additionalPropertiesPositionIsFront, $additionalProperties) {
-  @if $additionalPropertiesPositionIsFront {
-    #{$property}: unquote($additionalProperties + ' ' + map-get($theme, $color));
-  } @else {
-    #{$property}: unquote(map-get($theme, $color) + ' ' + $additionalProperties);
-  }
+@mixin themeProperty($property, $preProperties , $preColor , $color, $postColor,$postProperties) {
+  #{$property}: unquote($preProperties + ' ' + $color+' '+$postProperties);
 }
 
-@mixin theme($property, $color, $additionalPropertiesPositionIsFront: false, $additionalProperties: '') {
-  $light: map-get($themes, $light-theme);
-  $dark: map-get($themes, $dark-theme);
-  @include themeProperty($light, $property, $color, $additionalPropertiesPositionIsFront, $additionalProperties);
+@mixin theme($property,$color,$preColor: '', $postColor: '' ,$preProperties: '', $postProperties: '',$a:1) {
+  $light:map-get(map-get($themes, $light-theme),$color);
+  $dark:map-get(map-get($themes, $light-theme),$color);
+  $light-color: rgba($light, $a);
+  $dark-color: rgba($dark, $a);
+  @include themeProperty($property, $preProperties , $preColor , $light-color, $postColor,$postProperties);
   @media (prefers-color-scheme: dark) {
-    @include themeProperty($dark, $property, $color, $additionalPropertiesPositionIsFront, $additionalProperties);
+    @include themeProperty($property, $preProperties , $preColor , $dark-color, $postColor,$postProperties);
   }
 }
