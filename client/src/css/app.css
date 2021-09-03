@@ -78,6 +78,7 @@ button {
   border-bottom: 3px solid;
   border-color:  #ffa34b ;
   margin: 0 auto;
+  margin-top: 7px;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -120,15 +121,40 @@ button {
   }
 }
 
-.navbar .container .navbar-brand .logo #logo:hover #background, .navbar .container .navbar-brand .logo #logo:focus #background {
+.navbar .container .navbar-brand .logo-name {
+  display: none;
+  flex-direction: column;
+  margin-left: 20px;
+}
+
+@media (min-width: 50em) {
+  .navbar .container .navbar-brand .logo-name {
+    display: inline-flex;
+  }
+}
+
+.navbar .container .navbar-brand .logo-name .main-text {
+  font-size: 24px;
+  text-align: center;
+  font-weight: 600;
+}
+
+.navbar .container .navbar-brand .logo-name .sub-text {
+  text-align: center;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 1em;
+}
+
+.navbar .container .navbar-brand:hover .logo > #logo #background, .navbar .container .navbar-brand:focus .logo > #logo #background {
   transition: ease-in-out all .5s;
 }
 
-.navbar .container .navbar-brand .logo #logo:hover #border, .navbar .container .navbar-brand .logo #logo:focus #border {
+.navbar .container .navbar-brand:hover .logo > #logo #border, .navbar .container .navbar-brand:focus .logo > #logo #border {
   transition: ease-in-out all .5s;
 }
 
-.navbar .container .navbar-brand .logo #logo:hover #Fire, .navbar .container .navbar-brand .logo #logo:focus #Fire {
+.navbar .container .navbar-brand:hover .logo > #logo #Fire, .navbar .container .navbar-brand:focus .logo > #logo #Fire {
   transition: ease-in-out all .5s;
   animation: fire 1s infinite;
   animation-direction: alternate;
@@ -151,28 +177,9 @@ button {
 }
 
 @media (prefers-color-scheme: dark) {
-  .navbar .container .navbar-brand .logo #logo:hover #Fire, .navbar .container .navbar-brand .logo #logo:focus #Fire {
+  .navbar .container .navbar-brand:hover .logo > #logo #Fire, .navbar .container .navbar-brand:focus .logo > #logo #Fire {
     fill:  white ;
   }
-}
-
-.navbar .container .navbar-brand .logo-name {
-  display: inline-flex;
-  flex-direction: column;
-  margin-left: 20px;
-}
-
-.navbar .container .navbar-brand .logo-name .main-text {
-  font-size: 24px;
-  text-align: center;
-  font-weight: 600;
-}
-
-.navbar .container .navbar-brand .logo-name .sub-text {
-  text-align: center;
-  font-size: 14px;
-  text-transform: uppercase;
-  letter-spacing: 1em;
 }
 
 .navbar .container .navbar-toggler.collapsed, .navbar .container .navbar-toggler {
@@ -328,17 +335,17 @@ button {
   height: 500px;
 }
 
-.hero .background {
-  display: grid;
-  place-items: center;
-  position: absolute;
-  width: fill;
-  height: fill;
-  inset: 0;
+@media (min-width: 50em) {
+  .hero {
+    height: 60vw;
+  }
 }
 
 .hero .foreground {
-  display: grid;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   place-items: center;
   position: absolute;
   width: fill;
@@ -348,6 +355,11 @@ button {
 
 .hero.home {
   color:  #000505 ;
+  font-family: 'Times New Roman';
+  background: linear-gradient(180deg, rgba(87, 54, 151, 0.6) 19.45%, rgba(96, 60, 147, 0.5) 50%, rgba(255, 163, 75, 0.3) 77.05%, rgba(255, 163, 75, 0.1) 99.48%), url("../media/doctor-patient-interpreter Image.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -356,12 +368,10 @@ button {
   }
 }
 
-.hero.home .background {
-  background-color:  #573697 ;
+.hero.home .foreground {
+  padding: 15px;
 }
 
-@media (prefers-color-scheme: dark) {
-  .hero.home .background {
-    background-color:  #573697 ;
-  }
+.hero.home .foreground div h1, .hero.home .foreground div h2, .hero.home .foreground div div {
+  margin-bottom: 10px;
 }

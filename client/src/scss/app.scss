@@ -3,6 +3,7 @@
 * {
   padding:0px;
   margin:0px; 
+  // font-family: Arial, Helvetica, sans-serif;
   font-family: Arial, Helvetica, sans-serif;
 } 
 button{
@@ -43,6 +44,7 @@ button{
     border-bottom: 3px solid;
     @include theme('border-color',$color2);
     margin: 0 auto;
+    margin-top: 7px;
     .navbar-brand{
       display: flex; 
       .logo{
@@ -57,33 +59,12 @@ button{
           #border{
             @include theme('fill',$text3);
           } 
-          &:hover,&:focus{
-            #background{
-              transition: ease-in-out all .5s;
-              // @include theme('fill',$text3);
-            }
-            #border{
-              transition: ease-in-out all .5s;
-              // @include theme('fill',$color1);
-            }
-            #Fire{
-              transition: ease-in-out all .5s;
-              animation: fire 1s infinite;
-              animation-direction: alternate;
-              @keyframes fire {
-                0%{
-                  @include theme('fill',$text3);
-                }
-                100%{
-                  @include theme('fill',$color2);
-                }
-              }
-              @include theme('fill',$text3);
-            }
-          }
         }
         &-name{
-          display: inline-flex;
+          @include breakpoint('tablet'){
+            display: inline-flex;
+          }
+          display:none;
           flex-direction: column;
           margin-left: 20px;
           .main-text{
@@ -96,6 +77,32 @@ button{
             font-size: 14px;
             text-transform: uppercase;
             letter-spacing: 1em;
+          }
+        }
+      }
+      &:hover,&:focus{
+        .logo>#logo{
+          #background{
+          transition: ease-in-out all .5s;
+          // @include theme('fill',$text3);
+          }
+          #border{
+            transition: ease-in-out all .5s;
+            // @include theme('fill',$color1);
+          }
+          #Fire{
+            transition: ease-in-out all .5s;
+            animation: fire 1s infinite;
+            animation-direction: alternate;
+            @keyframes fire {
+              0%{
+                @include theme('fill',$text3);
+              }
+              100%{
+                @include theme('fill',$color2);
+              }
+            }
+            @include theme('fill',$text3);
           }
         }
       }
@@ -236,16 +243,15 @@ button{
   width: fill;
   overflow: hidden;
   height: 500px;
-  .background{
-    display: grid;
-    place-items: center;
-    position: absolute;
-    width: fill;
-    height: fill;
-    inset: 0;
+  @include breakpoint('tablet'){
+    height:60vw;
   }
   .foreground{
-    display: grid;
+    // display: grid;
+    color:white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     place-items: center;
     position: absolute;
     width: fill;
@@ -256,7 +262,17 @@ button{
 }
 .hero.home{
   @include theme('color',$text1);
-  .background{
-    @include theme('background-color',$color1);
+  font-family: 'Times New Roman';
+  background: linear-gradient(180deg, rgba(87, 54, 151, 0.6) 19.45%, rgba(96, 60, 147, 0.5) 50%, rgba(255, 163, 75, 0.3) 77.05%, rgba(255, 163, 75, .1) 99.48%),url('../media/doctor-patient-interpreter Image.png'),;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  .foreground{
+    padding:15px;
+    div{
+      h1,h2,div{
+        margin-bottom: 10px;
+      }
+    }
   }
 }
