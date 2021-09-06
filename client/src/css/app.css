@@ -256,7 +256,7 @@ button {
 
 .navbar .container #responsive-navbar-nav .navbar-nav a {
   transition: ease-in-out all 1s;
-  color:  #cacaca ;
+  color:  white ;
   margin: auto;
   margin: 0 20px;
   text-align: center;
@@ -267,7 +267,7 @@ button {
 
 @media (prefers-color-scheme: dark) {
   .navbar .container #responsive-navbar-nav .navbar-nav a {
-    color:  #cacaca ;
+    color:  white ;
   }
 }
 

@@ -17,12 +17,20 @@ export default function Home(props){
         </div>
         <div className='mini-about'>
             <div className='content'>
-               As a second language speaker, I know the struggles of speaking and understanding English, which is why I have gone the extra mile to become a certified interpreter. Through my services, I bridge the language gap between limited English proficient speakers and their service providers so they may have sound communication when it counts.
+                As a spoken language interpreter, I have recognized the need and importance
+                to be understood and have one’s thoughts or feelings validated. I uphold and
+                support the language access rights as mandated in Title VI of the Civil Rights
+                Act of 1964.
+                Through my professional service, both the language and cultural gaps in
+                communication were bridged to ensure sound communication between the
+                parties with limited English proficiency and the healthcare or legal counsel
+                service providers.
             </div>
             <div className='profile'>
                 <div>image</div>
                 <div>Glen Lubao, CoreCHI</div>
                 <div>Certified Medical Interpreter</div>
+                <div>Tagalog-English</div>
                 <div>Learn more about me</div>
             </div>
         </div>

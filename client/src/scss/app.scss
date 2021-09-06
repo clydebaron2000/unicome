@@ -179,7 +179,7 @@ button{
         }
         a{
           transition: ease-in-out all 1s;
-          @include theme('color', $text2);
+          @include theme('color', $text3);
           margin:auto;
           margin:0 20px;
           text-align: center;

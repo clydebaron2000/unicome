@@ -7,7 +7,6 @@ export default function Navbar(props) {
     const menu_bar={
         '/':'Home',
         '/about':'About',
-        '/services':'Services'
     }
     return (
         <NavbarBootstrap collapseOnSelect expand="lg" class="navbar" variant="dark" fixed="top">
