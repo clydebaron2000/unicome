@@ -1,4 +1,6 @@
 import DoctorPic from "../../media/doctor-patient-interpreter Image.png"
+import  profile from "../../media/Glen Lubao 08252021 57.jpg"
+
 export default function Home(props){
     return <>
         <div
@@ -17,21 +19,29 @@ export default function Home(props){
         </div>
         <div className='mini-about'>
             <div className='content'>
-                As a spoken language interpreter, I have recognized the need and importance
-                to be understood and have one’s thoughts or feelings validated. I uphold and
-                support the language access rights as mandated in Title VI of the Civil Rights
-                Act of 1964.
-                Through my professional service, both the language and cultural gaps in
-                communication were bridged to ensure sound communication between the
-                parties with limited English proficiency and the healthcare or legal counsel
-                service providers.
+                <p>
+                    As a spoken language interpreter, I have recognized the need and importance
+                    to be understood and have one’s thoughts or feelings validated. I uphold and
+                    support the language access rights as mandated in Title VI of the Civil Rights
+                    Act of 1964.
+                </p>
+                <p>
+                    Through my professional service, both the language and cultural gaps in
+                    communication were bridged to ensure sound communication between the
+                    parties with limited English proficiency and the healthcare or legal counsel
+                    service providers.
+                </p>
             </div>
             <div className='profile'>
-                <div>image</div>
-                <div>Glen Lubao, CoreCHI</div>
-                <div>Certified Medical Interpreter</div>
-                <div>Tagalog-English</div>
-                <div>Learn more about me</div>
+                <div class='img-container'>
+                    <img src={profile} alt='Glen Lubao'/>
+                </div>
+                <div class='info'>
+                    <h3>Glen Lubao, CoreCHI</h3>
+                    <h5>Certified Medical Interpreter</h5>
+                    <div>Tagalog-English</div>
+                    <a href='/about'>Learn more about me</a>
+                </div>
             </div>
         </div>
         <div>

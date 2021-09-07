@@ -1,10 +1,11 @@
 @import 'params/theme_colors';
 @import 'params/breakpoints';
-* {
+html>body>*,* {
   padding:0px;
   margin:0px; 
   // font-family: Arial, Helvetica, sans-serif;
-  font-family: Arial, Helvetica, sans-serif;
+  // font-family: Arial, Helvetica, sans-serif;
+  font-family: Montserrat, sans-serif;
 } 
 button{
   border: none;
@@ -263,7 +264,12 @@ button{
 .hero.home{
   @include theme('color',$text1);
   font-family: 'Times New Roman';
-  background: linear-gradient(180deg, rgba(87, 54, 151, 0.6) 19.45%, rgba(96, 60, 147, 0.5) 50%, rgba(255, 163, 75, 0.3) 77.05%, rgba(255, 163, 75, .1) 99.48%),url('../media/doctor-patient-interpreter Image.png'),;
+  background: linear-gradient(180deg, rgba(78, 41, 151, 0.7) 19.45%,
+                                            rgba(96, 60, 147, 0.6) 50%, 
+                                            rgba(255, 163, 75, 0.5) 77.05%, 
+                                            rgba(255, 163, 75, .4) 99.48%),
+              url('../media/doctor-patient-interpreter Image.png');
+  background-blend-mode: multiply;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -273,6 +279,47 @@ button{
       h1,h2,div{
         margin-bottom: 10px;
       }
+    }
+  }
+}
+.mini-about{
+  @include theme('background-color',$color1);
+  @include theme('color',$text3);
+  font-family: Montserrat, sans-serif;
+  @include breakpoint($tablet){
+    display: grid;
+  }
+  grid-template-columns: 1fr 1fr;
+  padding: 20px;
+  column-gap: 20px;
+  .content{
+    margin:auto;
+    font-size: 14px;
+  }
+  .profile{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .img-container{
+      border-radius: 10000px;
+      width: 12rem;
+      height: 12rem;    
+      margin-right: 10px;
+      // max-width: 200px;
+      // max-height: 200px;
+      position: relative;
+      overflow: hidden;
+      place-items: center;
+      img{
+        display: inline;
+        width: 100%;
+        // width: auto;
+      }
+    }
+    .info{
+      display: flex;
+      flex-direction: column;
+      margin: auto 0;
     }
   }
 }

@@ -1,7 +1,7 @@
-* {
+html > body > *, * {
   padding: 0px;
   margin: 0px;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Montserrat, sans-serif;
 }
 
 button {
@@ -356,7 +356,8 @@ button {
 .hero.home {
   color:  #000505 ;
   font-family: 'Times New Roman';
-  background: linear-gradient(180deg, rgba(87, 54, 151, 0.6) 19.45%, rgba(96, 60, 147, 0.5) 50%, rgba(255, 163, 75, 0.3) 77.05%, rgba(255, 163, 75, 0.1) 99.48%), url("../media/doctor-patient-interpreter Image.png");
+  background: linear-gradient(180deg, rgba(78, 41, 151, 0.7) 19.45%, rgba(96, 60, 147, 0.6) 50%, rgba(255, 163, 75, 0.5) 77.05%, rgba(255, 163, 75, 0.4) 99.48%), url("../media/doctor-patient-interpreter Image.png");
+  background-blend-mode: multiply;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -374,4 +375,63 @@ button {
 
 .hero.home .foreground div h1, .hero.home .foreground div h2, .hero.home .foreground div div {
   margin-bottom: 10px;
+}
+
+.mini-about {
+  background-color:  #573697 ;
+  color:  white ;
+  font-family: Montserrat, sans-serif;
+  grid-template-columns: 1fr 1fr;
+  padding: 20px;
+  column-gap: 20px;
+}
+
+@media (prefers-color-scheme: dark) {
+  .mini-about {
+    background-color:  #573697 ;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .mini-about {
+    color:  white ;
+  }
+}
+
+@media (min-width: 50em) {
+  .mini-about {
+    display: grid;
+  }
+}
+
+.mini-about .content {
+  margin: auto;
+  font-size: 14px;
+}
+
+.mini-about .profile {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mini-about .profile .img-container {
+  border-radius: 10000px;
+  width: 12rem;
+  height: 12rem;
+  margin-right: 10px;
+  position: relative;
+  overflow: hidden;
+  place-items: center;
+}
+
+.mini-about .profile .img-container img {
+  display: inline;
+  width: 100%;
+}
+
+.mini-about .profile .info {
+  display: flex;
+  flex-direction: column;
+  margin: auto 0;
 }
