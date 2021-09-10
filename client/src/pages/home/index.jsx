@@ -1,18 +1,23 @@
 // import DoctorPic from "../../media/doctor-patient-interpreter Image.png"
-import profile from "../../media/Glen Lubao 08252021 57.jpg";
 import {ReactComponent as MedicalLegal} from "../../media/legal medical.svg";
+import Profile from "../../media/Glen Lubao 08252021 57.jpg";
 export default function Home(props){
     return <>
+        {/*TODO: get close to centering text in hero */}
         <div className='hero home'>
             <div className='foreground'>
                 <div>
-                    <h1>Understanding where you need it most</h1>
-                    <h2>Certified Medical-Legal Interpretation</h2>
+                    {/* <h1>Understanding where you need it most</h1> */}
+                    {/* <h1>Understanding where <wbr></wbr> you need it most</h1> */}
+                    <h1>Understanding where</h1>
+                    <h1>you need it most</h1>
+                    
+                    <h2>Certified Medical-Legal Interpreter</h2>
                     <div className='button-container'>
-                        <button className='action-button'>
+                        <a className='action-button' href='/services'>
                             see my services
-                        </button>
-                        <button className='action-button'>
+                        </a>
+                        <button className='action-button' >
                             contact me
                         </button>
                     </div>
@@ -38,7 +43,7 @@ export default function Home(props){
                 </div>
                 <div className='profile'>
                     <div class='img-container'>
-                        <img src={profile} alt='Glen Lubao'/>
+                        <img src={Profile} alt='Glen Lubao'/>
                     </div>
                     <div class='info'>
                         <h3>Glen Lubao, CoreCHI</h3>
@@ -55,9 +60,6 @@ export default function Home(props){
             </h2>
             <div className='column-layout'>
                 <div className='box'>
-                    <MedicalLegal/>
-                </div>
-                <div className='box'>
                     <h3>Certification Brings Peace in Mind</h3>
                     <div>
                         <p>
@@ -73,7 +75,12 @@ export default function Home(props){
                             counsel providers.
                         </p>
                     </div>
-                    <h3>Some Services Require Certification</h3>
+                </div>
+                <div className='box'>
+                    <MedicalLegal/>
+                </div>
+                <div className='box'>
+                    <h3>Medical-Legal Appointments Require a Certified Interpreter</h3>
                     <div>
                         <p>
                             For Worker’s Compensation related medical treatment appointments and medical legal exams, the interpreter providing the services for such type of
@@ -86,6 +93,15 @@ export default function Home(props){
                 </div>
             </div>
         </section>
+        {/*TODO: create services list section */}
+        <section>
+            <h2>Here Are My Services:</h2>
+            <br></br>
+            <p>
+                QME, IME, AME, PQME, Deposition, Administrative Hearing
+            </p>
+        </section>
+
         <section className='lets-talk'>
             <h1>Let's Talk!</h1>
             <div>

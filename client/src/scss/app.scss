@@ -1,7 +1,7 @@
 @import 'params/theme_colors';
 @import 'params/breakpoints';
 @import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
-@import url('https://fonts.googleapis.com/css?family=NotoSerif&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Noto+Serif&display=swap');
 html>body>*,* {
   padding:0px;
   margin:0px; 
@@ -10,10 +10,10 @@ html>body>*,* {
   font-family: 'Montserrat', 'NotoSerif', sans-serif;
 } 
 h1{
-  font-size: 3em;
+  font-size: 3rem;
 }
 h2{
-  font-size: 2em;
+  font-size: 2rem;
 }
 button{
   border: none;
@@ -33,6 +33,7 @@ section{
 .action-button{
   @include theme('background-color',$color2);
   @include theme('color',$text3);
+  font-size:1em;
   font-weight: 700;
   padding: .5em 1em;
   border-radius: 10000px; 
@@ -288,8 +289,6 @@ section{
     min-height: 500px;
   }
   .foreground{
-    margin: 0 auto;
-    max-width: 50%;
     h1,h2{
       font-family: 'NotoSerif';
       font-style: normal;
@@ -321,8 +320,16 @@ section{
   background-repeat: no-repeat;
   background-size: cover;
   .foreground{
+    margin: 0 auto;
+    // max-width: 47%;
+    // transform: translateY(20px);
     padding:15px;
     div{
+      display: grid;
+      place-items: center;
+      h1{
+        text-transform: capitalize;
+      }
       h1,h2,div{
         margin-bottom: 10px;
       }
@@ -332,6 +339,9 @@ section{
         // width:fit-content;
         & :first-child{
           margin-right:1em;
+        }
+        *{
+          text-decoration: none;
         }
       }
     }
@@ -410,7 +420,8 @@ section{
   }
   .column-layout{
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    place-items: center;
+    grid-template-columns: repeat(1fr,3) ;
     grid-template-rows: 1fr;
     @include breakpoint-max(tablet){
       display: flex;

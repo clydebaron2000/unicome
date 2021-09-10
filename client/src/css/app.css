@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Montserrat&display=swap");
-@import url("https://fonts.googleapis.com/css?family=NotoSerif&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Noto+Serif&display=swap");
 html > body > *, * {
   padding: 0px;
   margin: 0px;
@@ -7,11 +7,11 @@ html > body > *, * {
 }
 
 h1 {
-  font-size: 3em;
+  font-size: 3rem;
 }
 
 h2 {
-  font-size: 2em;
+  font-size: 2rem;
 }
 
 button {
@@ -35,6 +35,7 @@ section {
 .action-button {
   background-color:  #ffa34b ;
   color:  white ;
+  font-size: 1em;
   font-weight: 700;
   padding: .5em 1em;
   border-radius: 10000px;
@@ -378,8 +379,6 @@ section {
 }
 
 .hero .foreground {
-  margin: 0 auto;
-  max-width: 50%;
   color: white;
   display: flex;
   flex-direction: column;
@@ -414,7 +413,17 @@ section {
 }
 
 .hero.home .foreground {
+  margin: 0 auto;
   padding: 15px;
+}
+
+.hero.home .foreground div {
+  display: grid;
+  place-items: center;
+}
+
+.hero.home .foreground div h1 {
+  text-transform: capitalize;
 }
 
 .hero.home .foreground div h1, .hero.home .foreground div h2, .hero.home .foreground div div {
@@ -428,6 +437,10 @@ section {
 
 .hero.home .foreground div .button-container :first-child {
   margin-right: 1em;
+}
+
+.hero.home .foreground div .button-container * {
+  text-decoration: none;
 }
 
 .mini-about {
@@ -521,7 +534,8 @@ section {
 
 .why-choose-certified .column-layout {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  place-items: center;
+  grid-template-columns: repeat(1fr, 3);
   grid-template-rows: 1fr;
 }
 
