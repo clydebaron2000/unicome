@@ -3,7 +3,7 @@ import {BrowserRouter as Router,
   Route,
   Switch
 } from 'react-router-dom';
-import "./css/bootstrap.css";
+// import "./css/bootstrap.css";
 import './css/app.css';
 import Navbar from "./components/navbar";
 const Home = lazy(_=>import('./pages/home'))
@@ -18,7 +18,8 @@ function App() {
         <Switch>
           <Route path="/" exact component={Home}/>
           <Route path="/about" exact component={About}/>
-          {/* <Route component={Home}/> */}
+          <Route path="/services" exact component={About}/>
+          <Route component={Home}/>
         </Switch>
       </Suspense>
 </Router>

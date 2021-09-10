@@ -2,12 +2,60 @@ import { NavLink as Link } from "react-router-dom"
 import NavbarBootstrap from 'react-bootstrap/Navbar'
 import Nav from 'react-bootstrap/Nav'
 import Container from 'react-bootstrap/Container'
+import {useState} from 'react'
 import { ReactComponent as Logo } from '../../logo.svg'
+import { ReactComponent as MenuIcon } from '../../media/menu-icon.svg'
 export default function Navbar(props) {
+    const [collapsed, setCollapsed] = useState(false);
+    const [active,setActive] = useState(window.location.pathname)
     const menu_bar={
         '/':'Home',
         '/about':'About',
+        '/services':'Services'
     }
+    if(true)
+    return (
+        <div class="navbar">
+        <div className='container'>
+            <a className='brand' href="/">
+                <Logo className="logo"/>
+                <div className='logo-name'>
+                    <div className='main-text'>
+                        United Communication
+                    </div>
+                    <div className='sub-text'>
+                        Enterprise
+                    </div>
+                </div>
+            </a> 
+            <button className='collapse-btn ' aria-controls="nav"
+                onClick={_=>setCollapsed(!collapsed)}
+            >
+                <MenuIcon/>
+            </button>
+            <div id="nav" className={'menu '+((collapsed)?'hide':' ')}>
+                <div className='menu-links'>
+                    {Object.keys(menu_bar).map((key,i)=>
+                        <div onClick={_=>{
+                            setActive(key)
+                        }} className={(key===active)?'active':''}>
+                            <Link  
+                                key={i}
+                                // className={(key===window.location.pathname)?"selected":null}
+                                exact to={key}
+                            >
+                                {menu_bar[key]}
+                            </Link>
+                        </div>
+                    )}
+                </div>
+                <button className="action-button">Contact me</button>
+        </div>
+        </div>
+    </div>
+    )
+
+
     return (
         <NavbarBootstrap collapseOnSelect expand="lg" class="navbar" variant="dark" fixed="top">
         <Container>

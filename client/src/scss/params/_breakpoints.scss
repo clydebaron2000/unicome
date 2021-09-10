@@ -21,7 +21,7 @@ $desktop:'desktop';
   }
 }
 
-@mixin breakpoint($point) {
+@mixin breakpoint-min($point) {
   @if $point == desktop {
     @media (min-width: 70em) { @content ; }
   }
@@ -31,10 +31,21 @@ $desktop:'desktop';
   @else if $point == tablet {
     @media (min-width: 50em) { @content ; }
   }
-  @else if $point == phablet {
+  @else if $point == phone {
     @media (min-width: 37.5em)  { @content ; }
   }
-  @else if $point == mobileonly {
+}
+@mixin breakpoint-max($point) {
+  @if $point == desktop {
+    @media (max-width: 70em) { @content ; }
+  }
+  @else if $point == laptop {
+    @media (max-width: 64em) { @content ; }
+  }
+  @else if $point == tablet {
+    @media (max-width: 50em) { @content ; }
+  }
+  @else if $point == phone{
     @media (max-width: 37.5em)  { @content ; }
   }
 }
