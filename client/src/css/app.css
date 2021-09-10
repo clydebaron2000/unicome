@@ -421,6 +421,15 @@ section {
   margin-bottom: 10px;
 }
 
+.hero.home .foreground div .button-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.hero.home .foreground div .button-container :first-child {
+  margin-right: 1em;
+}
+
 .mini-about {
   background-color:  #573697 ;
   color:  white ;

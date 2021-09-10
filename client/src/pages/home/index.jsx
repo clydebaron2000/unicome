@@ -8,9 +8,15 @@ export default function Home(props){
                 <div>
                     <h1>Understanding where you need it most</h1>
                     <h2>Certified Medical-Legal Interpretation</h2>
-                    <button className='action-button'>
-                        contact me
-                    </button>
+                    <div className='button-container'>
+                        <button className='action-button'>
+                            see my services
+                        </button>
+                        <button className='action-button'>
+                            contact me
+                        </button>
+                    </div>
+
                 </div>
             </div>
         </div>
