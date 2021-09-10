@@ -1,6 +1,6 @@
 import  profile from "../../media/Glen Lubao 08252021 57.jpg"
 export default function About(props){
-    console.log(profile)
+    // console.log(profile)
     return <>
         <div>
             <img className='profile-pic' src={profile} alt='aaaaa profile'/>

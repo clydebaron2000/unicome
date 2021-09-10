@@ -1,23 +1,31 @@
 import { NavLink as Link } from "react-router-dom"
 import NavbarBootstrap from 'react-bootstrap/Navbar'
+import{useLocation} from 'react-router';
 import Nav from 'react-bootstrap/Nav'
 import Container from 'react-bootstrap/Container'
-import {useState} from 'react'
+import {useEffect, useState} from 'react'
 import { ReactComponent as Logo } from '../../logo.svg'
 import { ReactComponent as MenuIcon } from '../../media/menu-icon.svg'
 export default function Navbar(props) {
     const [collapsed, setCollapsed] = useState(false);
     const [active,setActive] = useState(window.location.pathname)
+    const location = useLocation();
+    useEffect(_=>{
+        if(location.hash)
+            document?.querySelector?.(location.hash)?.scrollIntoView({
+                behavior:'smooth'
+            });
+    },[location])
     const menu_bar={
-        '/':'Home',
+        "/#":'Home',
+        '/#services':'Services',
         '/about':'About',
-        '/services':'Services'
     }
     if(true)
     return (
         <div class="navbar">
         <div className='container'>
-            <a className='brand' href="/">
+            <a className='brand' href="/#">
                 <Logo className="logo"/>
                 <div className='logo-name'>
                     <div className='main-text'>
@@ -38,6 +46,7 @@ export default function Navbar(props) {
                     {Object.keys(menu_bar).map((key,i)=>
                         <div onClick={_=>{
                             setActive(key)
+                            setCollapsed(false)
                         }} className={(key===active)?'active':''}>
                             <Link  
                                 key={i}

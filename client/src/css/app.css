@@ -6,6 +6,10 @@ html > body > *, * {
   font-family: 'Montserrat', 'NotoSerif', sans-serif;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 h1 {
   font-size: 3rem;
 }

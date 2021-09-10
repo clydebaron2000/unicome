@@ -94,7 +94,7 @@ export default function Home(props){
             </div>
         </section>
         {/*TODO: create services list section */}
-        <section>
+        <section id="services">
             <h2>Here Are My Services:</h2>
             <br></br>
             <p>
