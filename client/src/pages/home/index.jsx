@@ -1,6 +1,7 @@
 // import DoctorPic from "../../media/doctor-patient-interpreter Image.png"
 import {ReactComponent as MedicalLegal} from "../../media/legal medical.svg";
 import Profile from "../../media/Glen Lubao 08252021 57.jpg";
+import Footer from "../../components/footer";
 export default function Home(props){
     return <>
         {/*TODO: get close to centering text in hero */}
@@ -95,7 +96,7 @@ export default function Home(props){
         </section>
         {/*TODO: create services list section */}
         <section id="services">
-            <h2>Here Are My Services:</h2>
+            <h2>My Services</h2>
             <br></br>
             <p>
                 QME, IME, AME, PQME, Deposition, Administrative Hearing
@@ -110,5 +111,6 @@ export default function Home(props){
                 </button>
             </div>
         </section>
+        <Footer/>
     </>
 }

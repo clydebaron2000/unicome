@@ -1,21 +1,73 @@
 @import url("https://fonts.googleapis.com/css?family=Montserrat&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Noto+Serif&display=swap");
-html > body > *, * {
+:root {
+  font-size: clamp(9px, 1.5vw, 1em);
+  --fs-800:3rem;
+  --fs-700:2.5rem;
+  --fs-600:2rem;
+  --fs-500:1.5rem;
+  --fs-400:1rem;
+  --spacer:.3em;
+}
+
+@media (max-width: 50em) {
+  :root {
+    --fs-800:3rem;
+    --fs-700:2.5rem;
+    --fs-600:2rem;
+    --fs-500:1.75rem;
+    --fs-400:1.5rem;
+    --spacer:.3em;
+  }
+}
+
+html {
+  width: 100%;
+}
+
+body > * {
+  all: unset;
+  font-family: 'Montserrat', 'NotoSerif', sans-serif;
   padding: 0px;
   margin: 0px;
-  font-family: 'Montserrat', 'NotoSerif', sans-serif;
+}
+
+* {
+  font-family: 'Montserrat';
+  margin: 0;
+  font-size: var(--fs-400);
+}
+
+p {
+  margin-bottom: var(--spacer);
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: 'NotoSerif';
+}
+
+h1 {
+  font-size: var(--fs-800);
+  margin-bottom: var(--spacer);
+}
+
+h2 {
+  font-size: var(--fs-700);
+  margin-bottom: var(--spacer);
+}
+
+h3 {
+  font-size: var(--fs-600);
+  margin-bottom: var(--spacer);
+}
+
+h4 {
+  font-size: var(--fs-500);
+  margin-bottom: var(--spacer);
 }
 
 html {
   scroll-behavior: smooth;
-}
-
-h1 {
-  font-size: 3rem;
-}
-
-h2 {
-  font-size: 2rem;
 }
 
 button {
@@ -369,16 +421,20 @@ section {
 }
 
 .hero {
+  padding-top: 75px;
   position: relative;
   width: fill;
   overflow: hidden;
-  height: 500px;
+  height: 60vw;
+  min-height: 300px;
+  max-height: 70vh;
 }
 
 @media (min-width: 50em) {
   .hero {
     height: 60vw;
     min-height: 500px;
+    max-height: 70vh;
   }
 }
 
@@ -402,7 +458,6 @@ section {
 
 .hero.home {
   color:  #000505 ;
-  font-family: 'Times New Roman';
   background: linear-gradient(180deg, rgba(78, 41, 151, 0.7) 19.45%, rgba(96, 60, 147, 0.6) 50%, rgba(255, 163, 75, 0.5) 77.05%, rgba(255, 163, 75, 0.4) 99.48%), url("../media/doctor-patient-interpreter Image.png");
   background-blend-mode: multiply;
   background-position: center;
@@ -531,15 +586,10 @@ section {
   width: fit-content;
 }
 
-.why-choose-certified h2 {
-  font-size: 3em;
-  margin-bottom: .3em;
-}
-
 .why-choose-certified .column-layout {
   display: grid;
   place-items: center;
-  grid-template-columns: repeat(1fr, 3);
+  grid-template-columns: repeat(3, 1fr);
   grid-template-rows: 1fr;
 }
 
@@ -556,17 +606,12 @@ section {
   text-align: left;
 }
 
-.why-choose-certified .column-layout .box:first-child {
-  place-items: center;
-}
-
 .why-choose-certified .column-layout .box p {
   margin-bottom: .5em;
 }
 
 .why-choose-certified .column-layout .box h3 {
   color:  #573697 ;
-  font-size: 1.5em;
   margin: .5em 0;
 }
 
@@ -578,4 +623,39 @@ section {
 
 .lets-talk h1 {
   margin-bottom: .6em;
+}
+
+.footer {
+  width: fill;
+  padding: 2em;
+  background-color:  #573697 ;
+  color: white;
+  font-size: small;
+}
+
+@media (prefers-color-scheme: dark) {
+  .footer {
+    background-color:  #573697 ;
+  }
+}
+
+.footer, .footer div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+}
+
+.footer .logo, .footer div .logo {
+  width: 20px;
+  height: 20px;
+  margin-right: .3em;
+}
+
+.footer .icons *, .footer div .icons * {
+  margin-right: .2rem;
+}
+
+.footer .icons * * > *, .footer div .icons * * > * {
+  fill: white;
 }
