@@ -3,7 +3,7 @@ $tablet:50em;
 $laptop:64em;
 $desktop:70em;
 
-@mixin min($point) {
+@mixin breakpoint-min($point) {
   @if $point == desktop {
     @media (min-width: 70em) { @content ; }
   }
@@ -20,7 +20,7 @@ $desktop:70em;
     @media (min-width: $point)  { @content ; }
   }
 }
-@mixin max($point) {
+@mixin breakpoint-max($point) {
   @if $point == desktop {
     @media (max-width: 70em) { @content ; }
   }
