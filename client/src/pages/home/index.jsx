@@ -61,7 +61,7 @@ export default function Home(props){
             </h2>
             <div className='column-layout'>
                 <div className='box'>
-                    <h3>Certification Brings Peace in Mind</h3>
+                    <h3>Professionalism Balances the Scale</h3>
                     <div>
                         <p>
                             A language interpreter’s certification requires an education, rigorous testing,
@@ -72,8 +72,7 @@ export default function Home(props){
                             The professional expertise of certified medical-legal interpreters adheres to
                             their standards of practice & code of ethics. They balance the scale of the
                             health and well-being of the limited English proficient person and the integrity
-                            of professional opinions and judgments by both the healthcare and legal
-                            counsel providers.
+                            of professional opinions and judgments by both the healthcare and legal counselor providers.
                         </p>
                     </div>
                 </div>
@@ -81,7 +80,7 @@ export default function Home(props){
                     <MedicalLegal/>
                 </div>
                 <div className='box'>
-                    <h3>Medical-Legal Appointments Require a Certified Interpreter</h3>
+                    <h3>A Certified Interpreter is Required</h3>
                     <div>
                         <p>
                             For Worker’s Compensation related medical treatment appointments and medical legal exams, the interpreter providing the services for such type of
