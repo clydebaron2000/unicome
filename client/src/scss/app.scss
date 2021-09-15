@@ -3,7 +3,7 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Noto+Serif&display=swap');
 :root{
-  font-size: clamp(9px,1.2vw,1em);
+  font-size: clamp(14px,1.2vw,1em);
   // font-size: 2vw;
   --fs-800:2.75rem;
   --fs-700:2.5rem;
@@ -106,8 +106,18 @@ section{
     padding: .5em;
     padding-bottom: 0;
     max-width: 1080px;
-    border-bottom: .2em solid;
-    @include theme('border-color',$color2);
+    position: relative;
+    &::after{
+      position: absolute;
+      bottom:0;
+      content:'';
+      display: block;
+      @include theme('background-color',$color2);
+      height: .2em;
+      width:stretch;
+    }
+    // border-bottom: .2em solid;
+    // @include theme('border-color',$color2);
     margin: 0 auto;
     margin-top: 7px;
     // height: fit-content;
@@ -517,6 +527,7 @@ section{
     margin-bottom: 1em;
   }
   .description{
+    // margin:0 auto;
     display: flex;
     flex-direction: row;
     @include breakpoint-max(tablet){
@@ -526,7 +537,12 @@ section{
     gap: 20px;
     text-align: left;
     .box{
+      p{
+        padding-inline: 1rem;
+        margin-bottom: 1em;
+      }
       margin:auto 0;
+      // width: clamp(250px,50vw,500px);
       display: grid;
       place-items: center;
       height: stretch;

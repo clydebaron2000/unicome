@@ -28,7 +28,7 @@ export default function Navbar(props) {
                 <Logo className="logo"/>
                 <div className='logo-name'>
                     <div className='main-text'>
-                        United Communication
+                        United Communications
                     </div>
                     <div className='sub-text'>
                         Enterprise

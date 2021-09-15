@@ -15,7 +15,7 @@ export default function Home(props){
                     
                     <h2>Certified Medical-Legal Interpreter</h2>
                     <div className='button-container'>
-                        <a className='action-button' href='/services'>
+                        <a className='action-button' href='/#services'>
                             see my services
                         </a>
                         <button className='action-button' >
@@ -98,7 +98,7 @@ export default function Home(props){
         <section className='lets-talk'>
             <h1>Let's Talk D'Lingo!</h1>
             <div>
-                <p>
+                <p id="services">
                     QME, IME, AME, PQME, Deposition, Administrative Hearing
                 </p>
                 <button className='action-button'>

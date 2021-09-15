@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css?family=Montserrat&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Noto+Serif&display=swap");
 :root {
-  font-size: clamp(9px,1.2vw,1em);
+  font-size: clamp(14px,1.2vw,1em);
   --fs-800:2.75rem;
   --fs-700:2.5rem;
   --fs-600:2rem;
@@ -132,8 +132,7 @@ section {
   padding: 0.5em;
   padding-bottom: 0;
   max-width: 1080px;
-  border-bottom: 0.2em solid;
-  border-color:  #ffa34b ;
+  position: relative;
   margin: 0 auto;
   margin-top: 7px;
 }
@@ -142,9 +141,18 @@ section {
     flex-wrap: wrap;
   }
 }
+.navbar .container::after {
+  position: absolute;
+  bottom: 0;
+  content: "";
+  display: block;
+  background-color:  #ffa34b ;
+  height: 0.2em;
+  width: stretch;
+}
 @media (prefers-color-scheme: dark) {
-  .navbar .container {
-    border-color:  #ffa34b ;
+  .navbar .container::after {
+    background-color:  #ffa34b ;
   }
 }
 .navbar .container .brand {
@@ -640,6 +648,10 @@ section {
   display: grid;
   place-items: center;
   height: stretch;
+}
+.about .description .box p {
+  padding-inline: 1rem;
+  margin-bottom: 1em;
 }
 .about .description .box .img-container {
   height: fit-content;
