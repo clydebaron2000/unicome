@@ -111,7 +111,7 @@ section {
 .navbar {
   position: fixed;
   z-index: 1000;
-  width: fill;
+  width: stretch;
   background-color:  rgba(87, 54, 151, 0.85) ;
   color: white;
   backdrop-filter: blur(2px);
@@ -128,7 +128,7 @@ section {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  width: fill;
+  width: stretch;
   padding: 0.5em;
   padding-bottom: 0;
   max-width: 1080px;
@@ -274,7 +274,7 @@ section {
     font-size: 1em;
     display: block;
     flex-direction: column;
-    height: fill;
+    height: stretch;
     overflow: hidden;
     max-height: 0;
   }
@@ -293,7 +293,7 @@ section {
   }
   .navbar .container .menu .menu-links div {
     margin: 0;
-    width: fill;
+    width: stretch;
   }
 }
 .navbar .container .menu .menu-links div {
@@ -305,7 +305,7 @@ section {
 }
 @media (min-width: 50em) {
   .navbar .container .menu .menu-links div {
-    height: fill;
+    height: stretch;
   }
   .navbar .container .menu .menu-links div::after {
     position: absolute;
@@ -313,7 +313,7 @@ section {
     display: block;
     bottom: 0%;
     height: 0.5em;
-    width: fill;
+    width: stretch;
     background-color:  #ffa34b ;
     transition: all ease-in-out 0.5s;
     transform: scaleX(0%);
@@ -365,7 +365,7 @@ section {
   margin: 0;
 }
 .navbar .container .menu button {
-  width: fill;
+  width: stretch;
   margin: auto 0;
   height: fit-content;
 }
@@ -377,17 +377,16 @@ section {
 }
 
 .loading .wrapper svg {
-  width: fill;
-  height: fill;
+  width: stretch;
+  height: stretch;
   max-width: 50px;
   max-height: 50px;
   animation: circle 4s infinite;
 }
 
 .hero {
-  padding-top: 75px;
   position: relative;
-  width: fill;
+  width: stretch;
   overflow: hidden;
   height: 60vw;
   min-height: 300px;
@@ -407,8 +406,8 @@ section {
   justify-content: center;
   place-items: center;
   position: absolute;
-  width: fill;
-  height: fill;
+  width: stretch;
+  height: stretch;
   inset: 0;
 }
 .hero .foreground h1, .hero .foreground h2 {
@@ -419,7 +418,7 @@ section {
 
 .hero.home {
   color:  #000505 ;
-  background: linear-gradient(180deg, rgba(78, 41, 151, 0.7) 19.45%, rgba(96, 60, 147, 0.6) 50%, rgba(255, 163, 75, 0.5) 77.05%, rgba(255, 163, 75, 0.4) 99.48%), url("../media/doctor-patient-interpreter Image.png");
+  background: linear-gradient(180deg, rgba(78, 41, 151, 0.7) 19.45%, rgba(96, 60, 147, 0.6) 50%, rgba(255, 163, 75, 0.5) 77.05%, rgba(255, 163, 75, 0.4) 99.48%), url("../media/doctor-patient-interpreter Imagexsm.jpg");
   background-blend-mode: multiply;
   background-position: center;
   background-repeat: no-repeat;
@@ -433,6 +432,7 @@ section {
 .hero.home .foreground {
   margin: 0 auto;
   padding: 15px;
+  padding-top: 75px;
 }
 .hero.home .foreground div {
   display: grid;
@@ -562,7 +562,7 @@ section {
 }
 
 .footer {
-  width: fill;
+  width: stretch;
   padding: 2em;
   background-color:  #573697 ;
   color: white;
@@ -639,7 +639,7 @@ section {
   margin: auto 0;
   display: grid;
   place-items: center;
-  height: fill;
+  height: stretch;
 }
 .about .description .box .img-container {
   height: fit-content;

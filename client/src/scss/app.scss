@@ -87,7 +87,7 @@ section{
 .navbar{  
   position: fixed;
   z-index: 1000;
-  width: fill;
+  width: stretch;
   @include theme('background-color', $background3 ,$a:.85);
   color:white;
   backdrop-filter: blur(2px);
@@ -102,7 +102,7 @@ section{
       flex-wrap: wrap;
     }
     justify-content: space-between;
-    width: fill;
+    width: stretch;
     padding: .5em;
     padding-bottom: 0;
     max-width: 1080px;
@@ -209,7 +209,7 @@ section{
         font-size: 1em;
         display: block;
         flex-direction: column;
-        height: fill;
+        height: stretch;
         overflow: hidden;
         max-height: 0;
         &.hide{
@@ -224,7 +224,7 @@ section{
           flex-direction: column;
           div{
             margin:0;
-            width:fill;
+            width:stretch;
           }
         }
         div{
@@ -234,14 +234,14 @@ section{
           transition: all ease-in-out .5s;
           position: relative;
           @include breakpoint-min($tablet){
-            height: fill;
+            height: stretch;
             &::after{
               position: absolute;
               content:'';
               display: block;
               bottom: 0%;
               height: .5em;
-              width:fill;
+              width:stretch;
               @include theme('background-color',$color2);
               transition: all ease-in-out .5s;
               transform: scaleX(0%);
@@ -282,7 +282,7 @@ section{
         }
       }
       button{
-        width:fill;
+        width:stretch;
         @include breakpoint-max($tablet){
           margin: 10px;
           padding: 1em;
@@ -297,8 +297,8 @@ section{
 .loading{
   .wrapper{
     svg{
-      width: fill;
-      height: fill;
+      width: stretch;
+      height: stretch;
       max-width: 50px;
       max-height: 50px;
       animation: circle 4s infinite;
@@ -306,9 +306,9 @@ section{
   }
 }
 .hero{
-  padding-top:75px;
+  // padding-top:75px;
   position: relative;
-  width: fill;
+  width: stretch;
   overflow: hidden;
   height:60vw;
   min-height: 300px;
@@ -330,8 +330,8 @@ section{
     justify-content: center;
     place-items: center;
     position: absolute;
-    width: fill;
-    height: fill;
+    width: stretch;
+    height: stretch;
     inset: 0;
   }
 
@@ -342,7 +342,7 @@ section{
                                             rgba(96, 60, 147, 0.6) 50%, 
                                             rgba(255, 163, 75, 0.5) 77.05%, 
                                             rgba(255, 163, 75, .4) 99.48%),
-              url('../media/doctor-patient-interpreter Image.png');
+              url('../media/doctor-patient-interpreter Imagexsm.jpg');
   background-blend-mode: multiply;
   background-position: center;
   background-repeat: no-repeat;
@@ -352,6 +352,7 @@ section{
     // max-width: 47%;
     // transform: translateY(20px);
     padding:15px;
+    padding-top:75px;
     div{
       display: grid;
       place-items: center;
@@ -470,7 +471,7 @@ section{
   }
 }
 .footer{
-  width:fill;
+  width:stretch;
   padding:2em;
   @include theme('background-color',$color1);
   color:white;
@@ -528,7 +529,7 @@ section{
       margin:auto 0;
       display: grid;
       place-items: center;
-      height: fill;
+      height: stretch;
       .img-container{
         @include breakpoint-max(tablet){
           width: 30rem;

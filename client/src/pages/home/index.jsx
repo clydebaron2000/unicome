@@ -85,26 +85,22 @@ export default function Home(props){
                         <p>
                             For Worker’s Compensation related medical treatment appointments and medical legal exams, the interpreter providing the services for such type of
                             appointments must be “Certified” and meet the qualifications as mandated by
-                            the law under the California Code of Regulations, Title 8, Section 9795.1.5(a)(1) and 9795.1.6(a)92). Their names must be listed in the registry
-                            for Certification Commission for Healthcare Interpreters (CCHI) or National
+                            the law under the California Code of Regulations, Title 8, Section 9795.1.5(a)(1) and 9795.1.6(a)92). 
+                        </p>
+                        <p>
+                            Their names must be listed in the registry for Certification Commission for Healthcare Interpreters (CCHI) or National
                             Board of Certification for Medical Interpreters (National Board).
                         </p>
                     </div>
                 </div>
             </div>
         </section>
-        {/*TODO: create services list section */}
-        <section id="services">
-            <h2>My Services</h2>
-            <br></br>
-            <p>
-                QME, IME, AME, PQME, Deposition, Administrative Hearing
-            </p>
-        </section>
-
         <section className='lets-talk'>
-            <h1>Let's Talk!</h1>
+            <h1>Let's Talk D'Lingo!</h1>
             <div>
+                <p>
+                    QME, IME, AME, PQME, Deposition, Administrative Hearing
+                </p>
                 <button className='action-button'>
                     contact me
                 </button>
