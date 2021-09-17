@@ -425,7 +425,7 @@ section{
     // transform: translateY(20px);
     padding:15px;
     padding-top:75px;
-    &:first-child{
+    .content{
       display: grid;
       place-items: center;
       h1{

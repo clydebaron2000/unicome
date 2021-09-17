@@ -9,7 +9,7 @@ export default function Home(props){
         {/*TODO: get close to centering text in hero */}
         <div className='hero home'>
             <div className='foreground'>
-                <div>
+                <div className='content'>
                     {/* <h1>Understanding where you need it most</h1> */}
                     {/* <h1>Understanding where <wbr></wbr> you need it most</h1> */}
                     <h1>Understanding where</h1>

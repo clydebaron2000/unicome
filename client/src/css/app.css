@@ -506,24 +506,24 @@ section {
   padding: 15px;
   padding-top: 75px;
 }
-.hero.home .foreground:first-child {
+.hero.home .foreground .content {
   display: grid;
   place-items: center;
 }
-.hero.home .foreground:first-child h1 {
+.hero.home .foreground .content h1 {
   text-transform: capitalize;
 }
-.hero.home .foreground:first-child h1, .hero.home .foreground:first-child h2 {
+.hero.home .foreground .content h1, .hero.home .foreground .content h2 {
   margin-bottom: 10px;
 }
-.hero.home .foreground:first-child .button-container {
+.hero.home .foreground .content .button-container {
   display: flex;
   flex-direction: row;
 }
-.hero.home .foreground:first-child .button-container a + button {
+.hero.home .foreground .content .button-container a + button {
   margin-left: 1em;
 }
-.hero.home .foreground:first-child .button-container * {
+.hero.home .foreground .content .button-container * {
   text-decoration: none;
 }
 
