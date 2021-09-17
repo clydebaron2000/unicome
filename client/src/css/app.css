@@ -138,16 +138,17 @@ section {
   flex-direction: column;
   align-items: center;
 }
-
-.close-button {
+.modal .close-button {
   width: fit-content;
   position: absolute;
+  margin: 0;
+  padding: 0;
   right: 1rem;
   top: 1rem;
   background: none;
 }
-.close-button svg {
-  width: 30px;
+.modal .close-button svg {
+  width: 2rem;
 }
 
 .contact {
@@ -350,9 +351,6 @@ section {
     max-height: 0;
     padding: 0 0.5rem;
   }
-  .navbar .container .menu * {
-    width: stretch;
-  }
   .navbar .container .menu.show {
     transition: ease-in-out max-height 1s;
     max-height: 100vh;
@@ -364,6 +362,7 @@ section {
 }
 @media (max-width: 50em) {
   .navbar .container .menu .menu-links {
+    width: stretch;
     flex-direction: column;
   }
   .navbar .container .menu .menu-links div {
@@ -447,6 +446,7 @@ section {
   .navbar .container .menu button.action-button {
     margin: 3rem;
     padding: 2rem;
+    width: stretch;
   }
 }
 

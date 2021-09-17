@@ -115,15 +115,17 @@ section{
   display: flex;
   flex-direction: column;
   align-items: center;
-}
-.close-button{
-  width:fit-content;
-  position: absolute;
-  right:1rem;
-  top:1rem;
-  background: none;
-  svg{
-    width:30px;
+  .close-button{
+    width:fit-content;
+    position: absolute;
+    margin:0;
+    padding:0;
+    right:1rem;
+    top:1rem;
+    background: none;
+    svg{
+      width:2rem;
+    }
   }
 }
 .contact{
@@ -285,7 +287,6 @@ section{
         overflow: hidden;
         max-height: 0;
         padding:0 .5rem;
-        *{width:stretch;}
         &.show{
           transition: ease-in-out max-height 1s;
           max-height: 100vh;
@@ -295,6 +296,7 @@ section{
         font-weight: 500;
         display: flex;
         @include breakpoint-max($tablet){
+          width:stretch;
           flex-direction: column;
           div{
             margin:0 1.5rem;
@@ -361,6 +363,7 @@ section{
         @include breakpoint-max($tablet){
           margin: 3rem;
           padding: 2rem;
+          width:stretch;
         }
         height: fit-content;
       }
