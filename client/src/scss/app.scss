@@ -26,12 +26,12 @@
 html{
   width: 100%;
 }
-body>* {
+body {
   font-family: 'Montserrat', 'NotoSerif', sans-serif;
-  padding:0px;
   margin:0px; 
 }
 *{
+  padding:0px;
   font-family: 'Montserrat';
   margin:0;
   font-size: var(--fs-400);
