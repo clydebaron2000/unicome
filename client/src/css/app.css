@@ -73,6 +73,8 @@ html {
 
 button {
   border: none;
+  background: none;
+  color: white;
 }
 
 section {
@@ -351,7 +353,7 @@ section {
   .navbar .container .menu * {
     width: stretch;
   }
-  .navbar .container .menu.hide {
+  .navbar .container .menu.show {
     transition: ease-in-out max-height 1s;
     max-height: 100vh;
   }
@@ -437,12 +439,12 @@ section {
 .navbar .container .menu .menu-links:last-child {
   margin: 0;
 }
-.navbar .container .menu button {
+.navbar .container .menu button.action-button {
   margin: auto 0;
   height: fit-content;
 }
 @media (max-width: 50em) {
-  .navbar .container .menu button {
+  .navbar .container .menu button.action-button {
     margin: 3rem;
     padding: 2rem;
   }
@@ -514,6 +516,7 @@ section {
   text-transform: capitalize;
 }
 .hero.home .foreground .content h1, .hero.home .foreground .content h2 {
+  margin-top: 10px;
   margin-bottom: 10px;
 }
 .hero.home .foreground .content .button-container {

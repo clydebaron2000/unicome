@@ -7,21 +7,23 @@ import {useEffect, useState} from 'react'
 import { ReactComponent as Logo } from '../../logo.svg'
 import { ReactComponent as MenuIcon } from '../../media/menu-icon.svg'
 import ModalButton from "../ModalAndButton";
+import BounceButton from "../ActionButton";
 export default function Navbar(props) {
     const [collapsed, setCollapsed] = useState(false);
     const [active,setActive] = useState(window.location.pathname)
     const location = useLocation();
+    const menu_bar={
+        "/#":'Home',
+        '/#services':'Services',
+        '/about':'About',
+    }
     useEffect(_=>{
         if(location.hash)
             document?.querySelector?.(location.hash)?.scrollIntoView({
                 behavior:'smooth'
             });
     },[location])
-    const menu_bar={
-        "/#":'Home',
-        '/#services':'Services',
-        '/about':'About',
-    }
+    
     return (
         <div className="navbar">
         <div className='container'>
@@ -41,7 +43,7 @@ export default function Navbar(props) {
             >
                 <MenuIcon/>
             </button>
-            <div id="nav" className={'menu '+((collapsed)?'hide':' ')}>
+            <div id="nav" className={'menu'+((collapsed)?'':' show')}>
                 <div className='menu-links'>
                     {Object.keys(menu_bar).map((key,i)=>
                         <div key={i} onClick={_=>{
@@ -51,8 +53,11 @@ export default function Navbar(props) {
                             <Link  
                                 // className={(key===window.location.pathname)?"selected":null}
                                 exact to={key}
+                                href={key}
                             >
-                                {menu_bar[key]}
+                                <BounceButton>
+                                    {menu_bar[key]}
+                                </BounceButton>
                             </Link>
                         </div>
                     )}

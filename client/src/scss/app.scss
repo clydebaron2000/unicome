@@ -63,6 +63,8 @@ html{
 }
 button{
   border: none;
+  background: none;
+  color:white;
 }
 section{
   padding: 40px 20px;
@@ -284,7 +286,7 @@ section{
         max-height: 0;
         padding:0 .5rem;
         *{width:stretch;}
-        &.hide{
+        &.show{
           transition: ease-in-out max-height 1s;
           max-height: 100vh;
         }
@@ -353,7 +355,7 @@ section{
           margin:0;
         }
       }
-      button{
+      button.action-button{
         // width:stretch;
         margin: auto 0;
         @include breakpoint-max($tablet){
@@ -432,6 +434,7 @@ section{
         text-transform: capitalize;
       }
       h1,h2{
+        margin-top: 10px;
         margin-bottom: 10px;
       }
       .button-container{
