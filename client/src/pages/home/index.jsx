@@ -2,6 +2,8 @@
 import {ReactComponent as MedicalLegal} from "../../media/legal medical.svg";
 import Profile from "../../media/Glen Lubao 08252021 57.jpg";
 import Footer from "../../components/footer";
+import BounceButton from "../../components/ActionButton";
+import ModalButton from "../../components/ModalAndButton";
 export default function Home(props){
     return <>
         {/*TODO: get close to centering text in hero */}
@@ -15,12 +17,14 @@ export default function Home(props){
                     
                     <h2>Certified Medical-Legal Interpreter</h2>
                     <div className='button-container'>
-                        <a className='action-button' href='/#services'>
-                            see my services
+                        <a  href='/#services'>
+                            <BounceButton className='action-button'>
+                                see my services
+                            </BounceButton>
                         </a>
-                        <button className='action-button' >
+                        <ModalButton>
                             contact me
-                        </button>
+                        </ModalButton>
                     </div>
 
                 </div>
@@ -43,10 +47,10 @@ export default function Home(props){
                     </p>
                 </div>
                 <div className='profile'>
-                    <div class='img-container'>
+                    <div className='img-container'>
                         <img src={Profile} alt='Glen Lubao'/>
                     </div>
-                    <div class='info'>
+                    <div className='info'>
                         <h3>Glen Lubao, CoreCHI</h3>
                         <h5>Certified Medical Interpreter</h5>
                         <div>Tagalog-English</div>
@@ -101,9 +105,9 @@ export default function Home(props){
                 <p id="services">
                     QME, IME, AME, PQME, Deposition, Administrative Hearing
                 </p>
-                <button className='action-button'>
+                <ModalButton>
                     contact me
-                </button>
+                </ModalButton>
             </div>
         </section>
         <Footer/>

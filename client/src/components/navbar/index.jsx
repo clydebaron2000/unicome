@@ -1,11 +1,12 @@
 import { NavLink as Link } from "react-router-dom"
-import NavbarBootstrap from 'react-bootstrap/Navbar'
+// import NavbarBootstrap from 'react-bootstrap/Navbar'
 import{useLocation} from 'react-router';
-import Nav from 'react-bootstrap/Nav'
-import Container from 'react-bootstrap/Container'
+// import Nav from 'react-bootstrap/Nav'
+// import Container from 'react-bootstrap/Container'
 import {useEffect, useState} from 'react'
 import { ReactComponent as Logo } from '../../logo.svg'
 import { ReactComponent as MenuIcon } from '../../media/menu-icon.svg'
+import ModalButton from "../ModalAndButton";
 export default function Navbar(props) {
     const [collapsed, setCollapsed] = useState(false);
     const [active,setActive] = useState(window.location.pathname)
@@ -22,7 +23,7 @@ export default function Navbar(props) {
         '/about':'About',
     }
     return (
-        <div class="navbar">
+        <div className="navbar">
         <div className='container'>
             <a className='brand' href="/#">
                 <Logo className="logo"/>
@@ -43,12 +44,11 @@ export default function Navbar(props) {
             <div id="nav" className={'menu '+((collapsed)?'hide':' ')}>
                 <div className='menu-links'>
                     {Object.keys(menu_bar).map((key,i)=>
-                        <div onClick={_=>{
+                        <div key={i} onClick={_=>{
                             setActive(key)
                             setCollapsed(false)
                         }} className={(key===active)?'active':''}>
                             <Link  
-                                key={i}
                                 // className={(key===window.location.pathname)?"selected":null}
                                 exact to={key}
                             >
@@ -57,7 +57,9 @@ export default function Navbar(props) {
                         </div>
                     )}
                 </div>
-                <button className="action-button">Contact me</button>
+                <ModalButton>
+                    contact me
+                </ModalButton>
         </div>
         </div>
     </div>

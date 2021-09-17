@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css?family=Montserrat&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Noto+Serif&display=swap");
+@import-normalize;
 :root {
   font-size: clamp(14px,1.2vw,1em);
   --fs-800:2.75rem;
@@ -26,7 +27,7 @@ html {
 }
 
 body > * {
-  all: unset;
+  all: initial;
   font-family: "Montserrat", "NotoSerif", sans-serif;
   padding: 0px;
   margin: 0px;
@@ -89,7 +90,7 @@ section {
 }
 
 .action-button {
-  background-color:  #ffa34b ;
+  background: linear-gradient(10deg, #ffaa00, #ff6a00);
   color:  white ;
   font-size: 1em;
   font-weight: 700;
@@ -99,13 +100,72 @@ section {
 }
 @media (prefers-color-scheme: dark) {
   .action-button {
-    background-color:  #ffa34b ;
-  }
-}
-@media (prefers-color-scheme: dark) {
-  .action-button {
     color:  white ;
   }
+}
+
+.backdrop {
+  all: initial;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 10000;
+  width: fill;
+  height: 100vh;
+  background-color:  rgba(87, 54, 151, 0.8) ;
+  backdrop-filter: blur(3px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@media (prefers-color-scheme: dark) {
+  .backdrop {
+    background-color:  rgba(87, 54, 151, 0.8) ;
+  }
+}
+
+.modal {
+  width: clamp(50%, 700px, 90%);
+  background-color: white;
+  margin: auto;
+  padding: 1rem 2rem;
+  border-radius: var(--fs-400);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.close-button {
+  width: fit-content;
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+  background: none;
+}
+.close-button svg {
+  width: 30px;
+}
+
+.contact {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+}
+.contact a {
+  display: flex;
+  flex-direction: row;
+  text-decoration: none;
+  align-items: center;
+}
+.contact a * {
+  font-size: var(--fs-600);
+  color: initial;
+}
+.contact a * + * {
+  margin-left: 0.5rem;
+}
+.contact a + a {
+  margin-top: 1rem;
 }
 
 .navbar {
@@ -280,11 +340,14 @@ section {
     flex-grow: 1;
     align-items: center;
     font-size: 1em;
-    display: block;
     flex-direction: column;
     height: stretch;
     overflow: hidden;
     max-height: 0;
+    padding: 0 0.5rem;
+  }
+  .navbar .container .menu * {
+    width: stretch;
   }
   .navbar .container .menu.hide {
     transition: ease-in-out max-height 1s;
@@ -300,7 +363,7 @@ section {
     flex-direction: column;
   }
   .navbar .container .menu .menu-links div {
-    margin: 0;
+    margin: 0 1.5rem;
     width: stretch;
   }
 }
@@ -373,14 +436,13 @@ section {
   margin: 0;
 }
 .navbar .container .menu button {
-  width: stretch;
   margin: auto 0;
   height: fit-content;
 }
 @media (max-width: 50em) {
   .navbar .container .menu button {
-    margin: 10px;
-    padding: 1em;
+    margin: 3rem;
+    padding: 2rem;
   }
 }
 
@@ -442,24 +504,24 @@ section {
   padding: 15px;
   padding-top: 75px;
 }
-.hero.home .foreground div {
+.hero.home .foreground:first-child {
   display: grid;
   place-items: center;
 }
-.hero.home .foreground div h1 {
+.hero.home .foreground:first-child h1 {
   text-transform: capitalize;
 }
-.hero.home .foreground div h1, .hero.home .foreground div h2, .hero.home .foreground div div {
+.hero.home .foreground:first-child h1, .hero.home .foreground:first-child h2 {
   margin-bottom: 10px;
 }
-.hero.home .foreground div .button-container {
+.hero.home .foreground:first-child .button-container {
   display: flex;
   flex-direction: row;
 }
-.hero.home .foreground div .button-container :first-child {
-  margin-right: 1em;
+.hero.home .foreground:first-child .button-container a + button {
+  margin-left: 1em;
 }
-.hero.home .foreground div .button-container * {
+.hero.home .foreground:first-child .button-container * {
   text-decoration: none;
 }
 
@@ -569,6 +631,13 @@ section {
   margin-bottom: 0.6em;
 }
 
+.linkedin > #linkedin #text {
+  fill: white;
+}
+.linkedin > #linkedin #background {
+  fill: royalblue;
+}
+
 .footer {
   width: stretch;
   padding: 2em;
@@ -592,8 +661,8 @@ section {
   height: 20px;
   margin-right: 0.3em;
 }
-.footer .icons *, .footer div .icons * {
-  margin-right: 0.2rem;
+.footer .icons * + *, .footer div .icons * + * {
+  margin-left: 1rem;
 }
 .footer .icons * * > *, .footer div .icons * * > * {
   fill: white;

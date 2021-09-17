@@ -1,3 +1,4 @@
+@import-normalize;
 @import 'params/theme_colors';
 @import 'params/breakpoints';
 @import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
@@ -25,7 +26,7 @@ html{
   width: 100%;
 }
 body>* {
-  all:unset;
+  all:initial;
   font-family: 'Montserrat', 'NotoSerif', sans-serif;
   padding:0px;
   margin:0px; 
@@ -76,13 +77,71 @@ section{
   padding: .5em 1em;
 }
 .action-button{
-  @include theme('background-color',$color2);
+  background: linear-gradient(10deg, #ffaa00, #ff6a00);
+  // @include theme('background-color',$color2);
   @include theme('color',$text3);
   font-size:1em;
   font-weight: 700;
   padding: .5em 1em;
   border-radius: 10000px; 
   text-transform: capitalize;
+}
+.backdrop{
+  all:initial;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 10000;
+  // inset:0;
+  width: fill;
+  height: 100vh;
+  @include theme('background-color',$color1,$a:.8 );
+  backdrop-filter: blur(3px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.modal{
+  width: clamp(50%, 700px, 90%);
+  // height: min(50%, 300px);
+  background-color: white;
+  margin: auto;
+  padding: 1rem 2rem;
+  border-radius: var(--fs-400);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.close-button{
+  width:fit-content;
+  position: absolute;
+  right:1rem;
+  top:1rem;
+  background: none;
+  svg{
+    width:30px;
+  }
+}
+.contact{
+  padding:2rem;
+  display:flex;
+  flex-direction: column;
+  a{
+    display: flex;
+    flex-direction: row;
+    text-decoration: none;
+    align-items: center;
+    *{
+      font-size: var(--fs-600);
+      color:initial;
+    }
+    *+*{
+      margin-left: .5rem;
+    }
+  }
+  a+a{
+    margin-top: 1rem;
+  }
 }
 .navbar{  
   position: fixed;
@@ -217,11 +276,12 @@ section{
         flex-grow: 1;
         align-items: center;
         font-size: 1em;
-        display: block;
         flex-direction: column;
         height: stretch;
         overflow: hidden;
         max-height: 0;
+        padding:0 .5rem;
+        *{width:stretch;}
         &.hide{
           transition: ease-in-out max-height 1s;
           max-height: 100vh;
@@ -233,7 +293,7 @@ section{
         @include breakpoint-max($tablet){
           flex-direction: column;
           div{
-            margin:0;
+            margin:0 1.5rem;
             width:stretch;
           }
         }
@@ -292,12 +352,12 @@ section{
         }
       }
       button{
-        width:stretch;
-        @include breakpoint-max($tablet){
-          margin: 10px;
-          padding: 1em;
-        }
+        // width:stretch;
         margin: auto 0;
+        @include breakpoint-max($tablet){
+          margin: 3rem;
+          padding: 2rem;
+        }
         height: fit-content;
       }
     }
@@ -363,20 +423,20 @@ section{
     // transform: translateY(20px);
     padding:15px;
     padding-top:75px;
-    div{
+    &:first-child{
       display: grid;
       place-items: center;
       h1{
         text-transform: capitalize;
       }
-      h1,h2,div{
+      h1,h2{
         margin-bottom: 10px;
       }
       .button-container{
         display:flex;
         flex-direction: row;
-        & :first-child{
-          margin-right:1em;
+        a+button{
+          margin-left:1em;
         }
         *{
           text-decoration: none;
@@ -480,6 +540,14 @@ section{
     margin-bottom:.6em;
   }
 }
+.linkedin>#linkedin{
+  #text{
+    fill:white;
+  }
+  #background{
+    fill:royalblue;
+  }
+}
 .footer{
   width:stretch;
   padding:2em;
@@ -496,8 +564,10 @@ section{
       margin-right:.3em; 
     }
     .icons{
+      *+*{
+        margin-left: 1rem;
+      }
       *{
-        margin-right: .2rem;
         *>*{fill:white;}
       }
     }

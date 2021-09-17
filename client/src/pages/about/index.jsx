@@ -29,24 +29,23 @@ export default function About(props){
                             Experienced Certified Medical Interpreter with a demonstrated history of working in public relations, healthcare, spiritual care, administrative hearings & language services. Purpose driven in teaching, volunteering, community service, humanitarian service, and charity. Compassion is a passion to assist the poor, the sick & the hurting.
                         </p>
                         <p>
-                            Privileged and honored to be one among the 5 Certified Healthcare Interpreters in the United States at the present time for Tagalog language and sole provider of certified medical interpretation services in Greater San Diego, California.
-                        </p>
-                        <p>
                             Providing on-site, telehealth, or virtual remote certified medical-legal
                             language interpretation services (Tagalog-English) in some cities in California like San Diego County, Riverside County, Orange County, Los Angeles County
-                            and San Francisco (Virtual Remote, VRI).
-                            The type of appointments I have had provided services for were mostly
-                            worker’s compensation related cases like medical-legal exams, QME, IME, AME
-                            & PQME including administrative hearings & depositions but not limited to the
-                            following.
-                        </p>
-                        <p>
-                            Physical therapy, acupuncture, chiropractic, psyche, behavioral or cognitive behavioral therapy, aqua, and speech therapy including
+                            and San Francisco (Virtual Remote, VRI). The type of appointments I have had provided services for are 
+                            
+                            physical therapy, acupuncture, chiropractic, psyche, behavioral or cognitive behavioral therapy, aqua, and speech therapy including
                             pain management program related appointments.
                             Medical treatment appointments and follow-up visits with pre & post-surgery
                             medical examination, imaging, MRI CT X-Ray, nerve tests, EEG, EKG.
                             Translation of medical consent forms, advance directives,
                             compromise & release (C&R), and court-recorded transcripts.
+                            {/* were mostly
+                            worker’s compensation related cases like medical-legal exams, QME, IME, AME
+                            & PQME including administrative hearings & depositions but not limited to the
+                            following. */}
+                        </p>
+                        <p>
+                            I am privileged and honored to be one among the 5 Certified Healthcare Interpreters in the United States at the present time for Tagalog language and sole provider of certified medical interpretation services in Greater San Diego, California.
                         </p>
                     </div>
                 </div>
