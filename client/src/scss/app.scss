@@ -71,9 +71,11 @@ section{
   justify-content: center;
 }
 .secondary-button{
+  background-color: transparent;
   display: block;
   border-radius: 10000px;
   border:solid 2px white;
+  color:white;
   padding: .5em 1em;
 }
 .action-button{

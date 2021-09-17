@@ -54,7 +54,11 @@ export default function Home(props){
                         <h3>Glen Lubao, CoreCHI</h3>
                         <h5>Certified Medical Interpreter</h5>
                         <div>Tagalog-English</div>
-                        <a href='/about' className='secondary-button'>Learn more</a>
+                        <a href='/about'>
+                            <BounceButton className='secondary-button'>
+                                Learn more
+                            </BounceButton>
+                        </a>
                     </div>
                 </div>
             </div>
