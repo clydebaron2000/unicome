@@ -1,8 +1,6 @@
 import Footer from "../../components/footer"
 import  profile from "../../media/Glen Lubao 08252021 57.jpg"
 export default function About(props){
-    // console.log(profile)
-    if (true)
     return <>
     <div className='about'>
         <section>

@@ -221,11 +221,9 @@ section{
         .logo>#logo{
           #background{
           transition: ease-in-out all .5s;
-          // @include theme('fill',$text3);
           }
           #border{
             transition: ease-in-out all .5s;
-            // @include theme('fill',$color1);
           }
           #Fire{
             transition: ease-in-out all .5s;
@@ -534,6 +532,7 @@ section{
   }
 }
 .linkedin{
+  // modify size to match hierarchy (same as white of other elements) 
   #linkedin{
     #text{
       fill:white;
