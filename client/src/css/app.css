@@ -631,14 +631,14 @@ section {
   }
 }
 
-.lets-talk h1 {
-  margin-bottom: 0.6em;
+.lets-talk h1, .lets-talk p {
+  margin-bottom: 0.3em;
 }
 
-.linkedin > #linkedin #text {
+.linkedin #linkedin #text {
   fill: white;
 }
-.linkedin > #linkedin #background {
+.linkedin #linkedin #background {
   fill: royalblue;
 }
 
@@ -679,7 +679,7 @@ section {
 .about section {
   padding-block: 0;
   text-align: left;
-  margin-bottom: 0.3rem;
+  margin-bottom: 1rem;
 }
 .about h2 {
   font-size: var(--fs-600);

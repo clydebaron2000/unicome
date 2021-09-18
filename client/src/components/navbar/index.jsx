@@ -1,8 +1,5 @@
 import { NavLink as Link } from "react-router-dom"
-// import NavbarBootstrap from 'react-bootstrap/Navbar'
 import{useLocation} from 'react-router';
-// import Nav from 'react-bootstrap/Nav'
-// import Container from 'react-bootstrap/Container'
 import {useEffect, useState} from 'react'
 import { ReactComponent as Logo } from '../../logo.svg'
 import { ReactComponent as MenuIcon } from '../../media/menu-icon.svg'
@@ -43,7 +40,7 @@ export default function Navbar(props) {
             >
                 <MenuIcon/>
             </button>
-            <div id="nav" className={'menu'+((collapsed)?'':' show')}>
+            <div id="nav" className={'menu'+((collapsed)?' show':' ')}>
                 <div className='menu-links'>
                     {Object.keys(menu_bar).map((key,i)=>
                         <div key={i} onClick={_=>{
@@ -51,7 +48,6 @@ export default function Navbar(props) {
                             setCollapsed(false)
                         }} className={(key===active)?'active':''}>
                             <Link  
-                                // className={(key===window.location.pathname)?"selected":null}
                                 exact to={key}
                                 href={key}
                             >

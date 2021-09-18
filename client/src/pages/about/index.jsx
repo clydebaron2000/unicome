@@ -51,9 +51,9 @@ export default function About(props){
                 </div>
         </section>
         <section>
-            <h2>
+            <h3>
                 Professional Commitment
-            </h2>
+            </h3>
             <p>
                 Protect and ensure the well-being of the patient or the person with limited English proficiency (LEP). Speak for those who cannot speak for themselves, for the rights of all who are hurting and destitute. Speak the truth wholly to bridge the gap of language and cultural barriers between the LEP and healthcare providers (HCP) or legal counselors. 
             </p>

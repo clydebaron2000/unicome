@@ -1,20 +1,16 @@
-// import DoctorPic from "../../media/doctor-patient-interpreter Image.png"
+import { NavLink as Link } from "react-router-dom"
 import {ReactComponent as MedicalLegal} from "../../media/legal medical.svg";
 import Profile from "../../media/Glen Lubao 08252021 57.jpg";
 import Footer from "../../components/footer";
 import BounceButton from "../../components/ActionButton";
 import ModalButton from "../../components/ModalAndButton";
-export default function Home(props){
+export default function Home(){
     return <>
-        {/*TODO: get close to centering text in hero */}
         <div className='hero home'>
             <div className='foreground'>
                 <div className='content'>
-                    {/* <h1>Understanding where you need it most</h1> */}
-                    {/* <h1>Understanding where <wbr></wbr> you need it most</h1> */}
                     <h1>Understanding where</h1>
                     <h1>you need it most</h1>
-                    
                     <h2>Certified Medical-Legal Interpreter</h2>
                     <div className='button-container'>
                         <a  href='/#services'>
@@ -26,7 +22,6 @@ export default function Home(props){
                             contact me
                         </ModalButton>
                     </div>
-
                 </div>
             </div>
         </div>
@@ -54,11 +49,11 @@ export default function Home(props){
                         <h3>Glen Lubao, CoreCHI</h3>
                         <h5>Certified Medical Interpreter</h5>
                         <div>Tagalog-English</div>
-                        <a href='/about'>
+                        <Link exact to ="/about" href='/about'>
                             <BounceButton className='secondary-button'>
                                 Learn more
                             </BounceButton>
-                        </a>
+                        </Link>
                     </div>
                 </div>
             </div>
@@ -105,6 +100,9 @@ export default function Home(props){
         </section>
         <section className='lets-talk'>
             <h1>Let's Talk D'Lingo!</h1>
+            <p>
+                Medical Appointments
+            </p>
             <div>
                 <p id="services">
                     QME, IME, AME, PQME, Deposition, Administrative Hearing

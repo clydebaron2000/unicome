@@ -1,22 +1,12 @@
-import { lazy, Suspense, useState } from "react"
-import { motion, AnimatePresence } from "framer-motion"
+import { lazy, Suspense} from "react"
+
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom"
-// import './index.css';
 import "./css/app.css"
 import Navbar from "./components/navbar"
-import ModalButton from "./components/ModalAndButton"
 const Home = lazy((_) => import("./pages/home"))
 const About = lazy((_) => import("./pages/about"))
 
 function App() {
-	if (false)
-		return (
-			<>
-				<ModalButton>
-					contact me
-				</ModalButton>
-			</>
-		)
 	return (
 		<Router>
 			<Navbar />
