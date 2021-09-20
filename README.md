@@ -1,3 +1,3 @@
 # unicome
 
-http://heroku.unicome.net/
+http://unicome.net/
