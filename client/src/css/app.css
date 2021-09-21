@@ -32,10 +32,9 @@ html {
 html::-webkit-scrollbar {
   display: fixed;
   width: 10px;
-  background-color: transparent;
 }
 html::-webkit-scrollbar-track {
-  background-color: transparent;
+  background-color: white;
 }
 html::-webkit-scrollbar-thumb {
   background-color:  #573697 ;
@@ -481,15 +480,13 @@ section {
   position: relative;
   width: stretch;
   overflow: hidden;
-  height: 60vw;
+  height: clamp(500px,60vw,70vh);
   min-height: 300px;
   max-height: 70vh;
 }
 @media (min-width: 50em) {
   .hero {
-    height: 60vw;
-    min-height: 500px;
-    max-height: 70vh;
+    height: clamp(500px,60vw,1000px);
   }
 }
 .hero .foreground {
