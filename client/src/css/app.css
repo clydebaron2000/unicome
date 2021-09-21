@@ -511,7 +511,7 @@ section {
 }
 
 .hero.home {
-  margin-top: 78px;
+  margin-top: 60px;
   color:  #000505 ;
   background-origin: border-box, content-box;
   background: radial-gradient(97.05% 97.05% at 50% 2.95%, rgba(87, 54, 151, 0.47) 19.45%, rgba(96, 60, 147, 0.28) 47.76%, rgba(255, 163, 75, 0.15) 77.05%, rgba(255, 163, 75, 0) 99.48%), url("../media/doctor-patient-interpreter Imagexsm.jpg");
