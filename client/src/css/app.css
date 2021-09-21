@@ -219,7 +219,6 @@ section {
   max-width: 1080px;
   position: relative;
   margin: 0 auto;
-  margin-top: 7px;
 }
 @media (max-width: 50em) {
   .navbar .container {
@@ -241,7 +240,7 @@ section {
   }
 }
 .navbar .container .brand {
-  margin-bottom: 0.5em;
+  margin-bottom: 0.6em;
   display: flex;
   color: inherit;
   text-decoration: none;
@@ -512,7 +511,7 @@ section {
 }
 
 .hero.home {
-  margin-top: 65px;
+  margin-top: 78px;
   color:  #000505 ;
   background-origin: border-box, content-box;
   background: radial-gradient(97.05% 97.05% at 50% 2.95%, rgba(87, 54, 151, 0.47) 19.45%, rgba(96, 60, 147, 0.28) 47.76%, rgba(255, 163, 75, 0.15) 77.05%, rgba(255, 163, 75, 0) 99.48%), url("../media/doctor-patient-interpreter Imagexsm.jpg");

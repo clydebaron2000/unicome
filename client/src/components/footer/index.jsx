@@ -2,6 +2,7 @@ import { ReactComponent as Logo } from '../../logo.svg'
 import { ReactComponent as Email } from '../../media/email.svg'
 import { ReactComponent as Phone } from '../../media/phone.svg'
 import { ReactComponent as Linkedin } from '../../media/linkedin.svg'
+import BounceButton from '../ActionButton'
 
 export default function Footer(props) {
     if(true)
@@ -12,9 +13,21 @@ export default function Footer(props) {
                 <div>UNICOME</div>
             </div>
             <div className='icons'>
-                <a href='mailto:unicome11.11@gmail.com'><Email/></a>
-                <a href='tel:+(619) 410 4277'><Phone/></a>
-                <a href='https://www.linkedin.com/in/glen-lubao-1849ab46/'><Linkedin className='linkedin'/></a>
+                <a href='mailto:unicome11.11@gmail.com'>
+                    <BounceButton>
+                        <Email/>
+                    </BounceButton>
+                </a>
+                <a href='tel:+(619) 410 4277'>
+                    <BounceButton>
+                        <Phone/>
+                    </BounceButton>
+                </a>
+                <a href='https://www.linkedin.com/in/glen-lubao-1849ab46/'>
+                    <BounceButton>
+                        <Linkedin className='linkedin'/>
+                    </BounceButton>
+                </a>
             </div>
         </div>
     )
