@@ -1,5 +1,4 @@
 @import url("https://fonts.googleapis.com/css?family=Montserrat&display=swap");
-@import url("https://fonts.googleapis.com/css?family=Noto+Serif&display=swap");
 @import-normalize;
 :root {
   font-size: clamp(12px,1.2vw,1em);
@@ -47,7 +46,7 @@ html::-webkit-scrollbar-thumb {
 }
 
 body {
-  font-family: "Montserrat", "NotoSerif", sans-serif;
+  font-family: "Montserrat", sans-serif;
   margin: 0px;
 }
 
@@ -60,10 +59,6 @@ body {
 
 p {
   margin-bottom: var(--spacer);
-}
-
-h1, h2, h3, h4, h5 {
-  font-family: "NotoSerif";
 }
 
 h1 {
@@ -480,17 +475,17 @@ section {
   position: relative;
   width: stretch;
   overflow: hidden;
-  height: clamp(500px,60vw,70vh);
   min-height: 300px;
   max-height: 70vh;
+  height: clamp(500px,60vw,700px);
 }
-@media (min-width: 50em) {
+@media (max-width: 50em) {
   .hero {
-    height: clamp(500px,60vw,1000px);
+    height: clamp(300px,60vw,500px);
   }
 }
 .hero .foreground {
-  color: white;
+  color:  #573697 ;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -500,26 +495,74 @@ section {
   height: stretch;
   inset: 0;
 }
-.hero .foreground h1, .hero .foreground h2 {
-  font-size: var(--fs-700);
-  font-family: "NotoSerif";
+.hero .foreground h1 {
+  font-size: var(--fs-800);
   font-style: normal;
-  font-weight: normal;
+  font-weight: bold;
+}
+.hero .foreground h2 {
+  font-size: var(--fs-400);
+}
+@media (prefers-color-scheme: dark) {
+  .hero .foreground {
+    color:  #573697 ;
+  }
 }
 
 .hero.home {
   margin-top: 60px;
   color:  #000505 ;
-  background-origin: border-box, content-box;
   background: radial-gradient(97.05% 97.05% at 50% 2.95%, rgba(87, 54, 151, 0.47) 19.45%, rgba(96, 60, 147, 0.28) 47.76%, rgba(255, 163, 75, 0.15) 77.05%, rgba(255, 163, 75, 0) 99.48%), url("../media/doctor-patient-interpreter Imagexsm.jpg");
+  background-origin: border-box, content-box;
   background-blend-mode: multiply;
-  background-position: center;
+  background-position-x: center;
+  background-position-y: 10%;
   background-repeat: no-repeat;
-  background-size: cover;
 }
 @media (prefers-color-scheme: dark) {
   .hero.home {
     color:  #000505 ;
+  }
+}
+@media (min-width: 50em) {
+  .hero.home {
+    background: radial-gradient(97.05% 97.05% at 50% 2.95%, rgba(87, 54, 151, 0.47) 19.45%, rgba(96, 60, 147, 0.28) 47.76%, rgba(255, 163, 75, 0.15) 77.05%, rgba(255, 163, 75, 0) 99.48%), url("../media/doctor-patient-interpreter Imagexsm.jpg");
+    background-origin: border-box, content-box;
+    background-blend-mode: multiply;
+    background-position-x: center;
+    background-attachment: unset;
+    background-position-y: 20%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-size: 150vw;
+  }
+}
+@media (max-width: 50em) {
+  .hero.home {
+    background: radial-gradient(97.05% 97.05% at 50% 2.95%, rgba(87, 54, 151, 0.47) 19.45%, rgba(96, 60, 147, 0.28) 47.76%, rgba(255, 163, 75, 0.15) 77.05%, rgba(255, 163, 75, 0) 99.48%), url("../media/doctor-patient-interpreter Imagexsm.jpg");
+    background-blend-mode: multiply;
+    background-origin: border-box, content-box;
+    background-position-x: center;
+    background-attachment: unset;
+    background-position-y: 10%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-size: 150vw;
+    color: white;
+  }
+}
+@media (max-width: 37.5em) {
+  .hero.home {
+    background: radial-gradient(97.05% 97.05% at 50% 2.95%, rgba(87, 54, 151, 0.47) 19.45%, rgba(96, 60, 147, 0.28) 47.76%, rgba(255, 163, 75, 0.15) 77.05%, rgba(255, 163, 75, 0) 99.48%), url("../media/doctor-patient-interpreter Imagexsm.jpg");
+    background-blend-mode: multiply;
+    background-origin: border-box, content-box;
+    background-position-x: center;
+    background-attachment: unset;
+    background-position-y: 10%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-size: 150vw;
+    color: white;
   }
 }
 .hero.home .foreground {
@@ -536,6 +579,13 @@ section {
 .hero.home .foreground .content h1, .hero.home .foreground .content h2 {
   margin-top: 10px;
   margin-bottom: 10px;
+}
+@media (max-width: 37.5em) {
+  .hero.home .foreground .content h1, .hero.home .foreground .content h2 {
+    color: white;
+    text-align: center;
+    font-weight: bolder;
+  }
 }
 .hero.home .foreground .content .button-container {
   display: flex;

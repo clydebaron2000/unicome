@@ -3,10 +3,35 @@ import { lazy, Suspense} from "react"
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom"
 import "./css/app.css"
 import Navbar from "./components/navbar"
+
+import BounceButton from "./components/ActionButton";
+import ModalButton from "./components/ModalAndButton";
+
 const Home = lazy((_) => import("./pages/home"))
 const About = lazy((_) => import("./pages/about"))
 
 function App() {
+	if(false)
+	return  (
+	<div className='hero home'>
+		<div className='foreground'>
+			<div className='content'>
+				<h1>Understanding where</h1>
+				<h1>you need it most</h1>
+				<h2>Certified Medical-Legal Interpreter</h2>
+				<div className='button-container'>
+					<a  href='/#services'>
+						<BounceButton className='action-button'>
+							my services
+						</BounceButton>
+					</a>
+					<ModalButton>
+						contact me
+					</ModalButton>
+				</div>
+			</div>
+		</div>
+	</div>)
 	return (
 		<Router>
 			<Navbar />

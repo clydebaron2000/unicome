@@ -387,19 +387,23 @@ section{
   position: relative;
   width: stretch;
   overflow: hidden;
-  height:clamp(500px,60vw,70vh);
   min-height: 300px;
   max-height: 70vh;
-  @include breakpoint-min($tablet){
-    height:clamp(500px,60vw,1000px);
+  height:clamp(500px,60vw,700px);
+  @include breakpoint-max($tablet){
+    height:clamp(300px,60vw,500px);
   }
   .foreground{
-    h1,h2{
-      font-size: var(--fs-700);
+    h1{
+      font-size: var(--fs-800);
       font-style: normal;
-      font-weight: normal;
+      font-weight: bold;
     }
-    color:white;
+    h2{
+      font-size: var(--fs-400);
+    }
+    @include theme('color',$color1);
+    // color:;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -414,12 +418,24 @@ section{
 .hero.home{
   margin-top: 60px;
   @include theme('color',$text1);
+  @include breakpoint-min($tablet){
+    background: radial-gradient(97.05% 97.05% at 50% 2.95%, rgba(87, 54, 151, 0.47) 19.45%, rgba(96, 60, 147, 0.28) 47.76%, rgba(255, 163, 75, 0.15) 77.05%, rgba(255, 163, 75, 0) 99.48%), url('../media/doctor-patient-interpreter Imagexsm.jpg');
+    background-origin: border-box,content-box;
+    background-blend-mode: multiply;
+    background-position-x: center;
+    background-attachment:unset;
+    background-position-y: 20%;
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-size: 150vw;
+    
+  }
+  background: radial-gradient(97.05% 97.05% at 50% 2.95%, rgba(87, 54, 151, 0.47) 19.45%, rgba(96, 60, 147, 0.28) 47.76%, rgba(255, 163, 75, 0.15) 77.05%, rgba(255, 163, 75, 0) 99.48%), url('../media/doctor-patient-interpreter Imagexsm.jpg');
   // make background not gloomy, make background stand out
   // - make all heads show
   // - get rid of gradient 
   // TODO: re-draw the hero 
   background-origin: border-box,content-box;
-  background: radial-gradient(97.05% 97.05% at 50% 2.95%, rgba(87, 54, 151, 0.47) 19.45%, rgba(96, 60, 147, 0.28) 47.76%, rgba(255, 163, 75, 0.15) 77.05%, rgba(255, 163, 75, 0) 99.48%), url('../media/doctor-patient-interpreter Imagexsm.jpg');
   // background: linear-gradient(180deg,
   //                                           rgba(78, 41, 151, 0.7) 19.45%,
   //                                           rgba(96, 60, 147, 0.6) 50%, 
@@ -427,13 +443,46 @@ section{
   //                                           rgba(255, 163, 75, .4) 99.48%),
   //             url('../media/doctor-patient-interpreter Imagexsm.jpg');
   background-blend-mode: multiply;
-  background-position: center;
+  background-position-x: center;
+  background-position-y: 10%;
   background-repeat: no-repeat;
-  background-size: cover;
+  // background-attachment: fixed;
+  @include breakpoint-max($tablet){
+  background: radial-gradient(97.05% 97.05% at 50% 2.95%, rgba(87, 54, 151, 0.47) 19.45%, rgba(96, 60, 147, 0.28) 47.76%, rgba(255, 163, 75, 0.15) 77.05%, rgba(255, 163, 75, 0) 99.48%), url('../media/doctor-patient-interpreter Imagexsm.jpg');
+
+    background-blend-mode: multiply;
+    background-origin: border-box,content-box;
+    background-position-x: center;
+    background-attachment:unset;
+    background-position-y: 10%;
+    background-repeat: no-repeat;
+
+    // background-position-y: center;
+    background-size:cover;
+    background-size: 150vw;
+    // background-width
+    color:white;
+
+  }
+  @include breakpoint-max($phone){
+  background: radial-gradient(97.05% 97.05% at 50% 2.95%, rgba(87, 54, 151, 0.47) 19.45%, rgba(96, 60, 147, 0.28) 47.76%, rgba(255, 163, 75, 0.15) 77.05%, rgba(255, 163, 75, 0) 99.48%), url('../media/doctor-patient-interpreter Imagexsm.jpg');
+    // background: linear-gradient(180deg, rgba(87, 54, 151, 0.7) 19.45%, rgba(52, 44, 63, 0.6) 47.76%, rgba(255, 163, 75, 0.5) 77.05%, rgba(255, 163, 75, .4) 99.48%), url('../media/doctor-patient-interpreter Imagexsm.jpg');
+    background-blend-mode: multiply;
+    background-origin: border-box,content-box;
+    background-position-x: center;
+    background-attachment:unset;
+    background-position-y: 10%;
+    background-repeat: no-repeat;
+    // background-position-y: center;
+    background-size:cover;
+    background-size: 150vw;
+    // background-width
+    color:white;
+
+  }
   .foreground{
     margin: 0 auto;
     padding:15px;
-    // padding-top:75px;
     .content{
       display: grid;
       place-items: center;
@@ -441,6 +490,12 @@ section{
         text-transform: capitalize;
       }
       h1,h2{
+        @include breakpoint-max($phone){
+          color:white;
+          text-align: center;
+          // border: ;
+          font-weight: bolder;
+        }
         margin-top: 10px;
         margin-bottom: 10px;
       }
