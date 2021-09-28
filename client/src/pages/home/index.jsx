@@ -15,7 +15,7 @@ export default function Home(){
                     <div className='button-container'>
                         <a  href='/#services'>
                             <BounceButton className='action-button'>
-                                see my services
+                                my services
                             </BounceButton>
                         </a>
                         <ModalButton>
