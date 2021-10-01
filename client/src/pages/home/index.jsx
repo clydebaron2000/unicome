@@ -9,7 +9,7 @@ export default function Home(){
         <div className='hero home'>
             <div className='foreground'>
                 <div className='content'>
-                    <h1>Understanding where</h1>
+                    <h1>Understanding when</h1>
                     <h1>you need it most</h1>
                     <h2>Certified Medical-Legal Interpreter</h2>
                     <div className='button-container'>
