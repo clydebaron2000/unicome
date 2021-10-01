@@ -47,7 +47,8 @@ html::-webkit-scrollbar-thumb {
 
 body {
   font-family: "Montserrat", sans-serif;
-  margin: 0px;
+  margin: 0px auto;
+  max-width: 1600px;
 }
 
 * {
@@ -191,6 +192,8 @@ section {
   position: fixed;
   z-index: 1000;
   width: stretch;
+  left: 0;
+  top: 0;
   background-color:  rgba(87, 54, 151, 0.85) ;
   color: white;
   backdrop-filter: blur(2px);
@@ -481,7 +484,7 @@ section {
 }
 @media (max-width: 50em) {
   .hero {
-    height: clamp(300px,60vw,500px);
+    height: clamp(300px,50vw,500px);
   }
 }
 .hero .foreground {
@@ -511,18 +514,12 @@ section {
 
 .hero.home {
   margin-top: 60px;
-  color:  #000505 ;
   background: radial-gradient(97.05% 97.05% at 50% 2.95%, rgba(87, 54, 151, 0.47) 19.45%, rgba(96, 60, 147, 0.28) 47.76%, rgba(255, 163, 75, 0.15) 77.05%, rgba(255, 163, 75, 0) 99.48%), url("../media/doctor-patient-interpreter Imagexsm.jpg");
   background-origin: border-box, content-box;
   background-blend-mode: multiply;
   background-position-x: center;
   background-position-y: 10%;
   background-repeat: no-repeat;
-}
-@media (prefers-color-scheme: dark) {
-  .hero.home {
-    color:  #000505 ;
-  }
 }
 @media (min-width: 50em) {
   .hero.home {
@@ -534,7 +531,7 @@ section {
     background-position-y: 20%;
     background-repeat: no-repeat;
     background-size: cover;
-    background-size: 150vw;
+    background-size: 130%;
   }
 }
 @media (max-width: 50em) {
