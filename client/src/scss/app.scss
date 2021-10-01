@@ -95,7 +95,7 @@ section{
 .action-button{
   background: linear-gradient(10deg, #ffaa00, #ff6a00);
   @include theme('color',$text3);
-  font-size:1em;
+  font-size:var(--fs-400);
   font-weight: 700;
   padding: .5em 1em;
   border-radius: 10000px; 
@@ -117,7 +117,9 @@ section{
 }
 .modal{
   width: clamp(50%, 700px, 90%);
-  background-color: white;
+    background: linear-gradient(10deg, #ffaa00, #ff6a00);
+  color:white;
+  // background-color: white;
   margin: auto;
   padding: 1rem 2rem;
   border-radius: var(--fs-400);
@@ -134,6 +136,9 @@ section{
     background: none;
     svg{
       width:2rem;
+      #background{
+        fill:black;
+      }
     }
   }
 }
@@ -147,6 +152,7 @@ section{
     text-decoration: none;
     align-items: center;
     *{
+      // color:white !important;
       font-size: var(--fs-600);
       color:initial;
     }
@@ -403,7 +409,7 @@ section{
       font-weight: bold;
     }
     h2{
-      font-size: var(--fs-400);
+      font-size: var(--fs-500);
     }
     @include theme('color',$color1);
     // color:;
@@ -485,6 +491,7 @@ section{
         margin-top: 10px;
         margin-bottom: 10px;
       }
+      h2{font-size: var(--fs-500);}
       .button-container{
         display:flex;
         flex-direction: row;
@@ -611,9 +618,13 @@ section{
     align-items: center;
     flex-direction: row;
     .logo{
-      width:20px; 
-      height:20px;
-      margin-right:.3em; 
+      width:40;
+      height:40;
+      margin-right:1em; 
+      &+div{
+        font-size: var(--fs-600);
+        line-height: var(--fs-600);
+      }
     }
     .icons{
       *+*{
@@ -624,7 +635,7 @@ section{
       }
     }
   }
-  font-size: small;
+
 }
 .about{  
   margin-bottom: 1rem;

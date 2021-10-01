@@ -111,7 +111,7 @@ section {
 .action-button {
   background: linear-gradient(10deg, #ffaa00, #ff6a00);
   color:  white ;
-  font-size: 1em;
+  font-size: var(--fs-400);
   font-weight: 700;
   padding: 0.5em 1em;
   border-radius: 10000px;
@@ -145,7 +145,8 @@ section {
 
 .modal {
   width: clamp(50%, 700px, 90%);
-  background-color: white;
+  background: linear-gradient(10deg, #ffaa00, #ff6a00);
+  color: white;
   margin: auto;
   padding: 1rem 2rem;
   border-radius: var(--fs-400);
@@ -164,6 +165,9 @@ section {
 }
 .modal .close-button svg {
   width: 2rem;
+}
+.modal .close-button svg #background {
+  fill: black;
 }
 
 .contact {
@@ -504,7 +508,7 @@ section {
   font-weight: bold;
 }
 .hero .foreground h2 {
-  font-size: var(--fs-400);
+  font-size: var(--fs-500);
 }
 @media (prefers-color-scheme: dark) {
   .hero .foreground {
@@ -583,6 +587,9 @@ section {
     text-align: center;
     font-weight: bolder;
   }
+}
+.hero.home .foreground .content h2 {
+  font-size: var(--fs-500);
 }
 .hero.home .foreground .content .button-container {
   display: flex;
@@ -718,7 +725,6 @@ section {
   padding: 2em;
   background-color:  #573697 ;
   color: white;
-  font-size: small;
 }
 @media (prefers-color-scheme: dark) {
   .footer {
@@ -732,9 +738,13 @@ section {
   flex-direction: row;
 }
 .footer .logo, .footer div .logo {
-  width: 20px;
-  height: 20px;
-  margin-right: 0.3em;
+  width: 40;
+  height: 40;
+  margin-right: 1em;
+}
+.footer .logo + div, .footer div .logo + div {
+  font-size: var(--fs-600);
+  line-height: var(--fs-600);
 }
 .footer .icons * + *, .footer div .icons * + * {
   margin-left: 1rem;
