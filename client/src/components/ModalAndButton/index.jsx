@@ -6,6 +6,7 @@ import { ReactComponent as Logo } from '../../logo.svg'
 import { ReactComponent as Email } from '../../media/email.svg'
 import { ReactComponent as Phone } from '../../media/phone.svg'
 import { ReactComponent as Linkedin } from '../../media/linkedin.svg'
+import { ReactComponent as Medlegal } from '../../media/legal medical.svg'
 
 export default function ModalButton({ children}) {
 	const [isOpen, setIsOpen] = useState(false)
@@ -25,6 +26,13 @@ export default function ModalButton({ children}) {
 			{isOpen && (
 				<Modal modalOpen={isOpen} handleClose={close}>
                     <div className='contact'>
+						<div className='head'>
+							<Medlegal width='50px' height='50px'/>
+							<h4>
+								Certified Med-Legal Interpreter
+							</h4>
+						</div>
+						<br/>
                         <motion.a href='mailto:unicome11.11@gmail.com'
                             whileHover={{scale:1.1}}
                             whileTap={{scale:0.9}}
