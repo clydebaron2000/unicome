@@ -5,7 +5,7 @@
   --fs-800:2.25rem;
   --fs-700:2.1rem;
   --fs-600:2rem;
-  --fs-500:1.5rem;
+  --fs-500:1.25rem;
   --fs-400:1rem;
   --spacer:.3em;
 }
@@ -16,7 +16,7 @@
     --fs-700:2.5rem;
     --fs-600:2rem;
     --fs-500:1.75rem;
-    --fs-400:1.5rem;
+    --fs-400:1.25rem;
     --spacer:.3em;
   }
 }
@@ -30,7 +30,7 @@ html {
 }
 html::-webkit-scrollbar {
   display: fixed;
-  width: 10px;
+  width: 0.5rem;
 }
 html::-webkit-scrollbar-track {
   background-color: white;
@@ -94,10 +94,39 @@ button {
 }
 
 section {
+  width: stretch;
   padding: 40px 20px;
   text-align: center;
   align-items: center;
   justify-content: center;
+}
+
+.stripes {
+  width: stretch;
+  display: block;
+}
+
+.stripped-card {
+  background-color:  #ffa34b ;
+  background: linear-gradient(10deg, #ffaa00, #ff6a00);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+@media (prefers-color-scheme: dark) {
+  .stripped-card {
+    background-color:  #ffa34b ;
+  }
+}
+.stripped-card h1, .stripped-card h2 {
+  text-align: center;
+}
+.stripped-card > *:not(.stripes, section) {
+  padding: 0 var(--fs-600);
+  margin-block: var(--fs-500);
+}
+.stripped-card > section {
+  margin-inline: var(--fs-600);
 }
 
 .secondary-button {
@@ -512,7 +541,7 @@ section {
 @media (min-width: 50em) {
   .hero .foreground {
     position: relative;
-    top: -10%;
+    top: -2%;
   }
 }
 .hero .foreground h1 {
@@ -531,23 +560,23 @@ section {
 
 .hero.home {
   margin-top: 60px;
-  background: radial-gradient(97.05% 97.05% at 50% 2.95%, rgba(87, 54, 151, 0.47) 19.45%, rgba(96, 60, 147, 0.28) 47.76%, rgba(255, 163, 75, 0.15) 77.05%, rgba(255, 163, 75, 0) 99.48%), url("../media/doctor-patient-interpreter Imagexsm.jpg");
+  background: radial-gradient(97.05% 97.05% at 50% 2.95%, rgba(87, 54, 151, 0.47) 19.45%, rgba(96, 60, 147, 0.28) 47.76%, rgba(255, 163, 75, 0.15) 77.05%, rgba(255, 163, 75, 0) 99.48%), url("../media/doctor-patient-interpreter xsm1.jpg");
   background-origin: border-box, content-box;
   background-blend-mode: multiply;
   background-position-x: center;
   background-position-y: 10%;
   background-repeat: no-repeat;
   background-size: cover;
-  background-size: 130%;
+  background-size: 150vw;
 }
 @media (min-width: 50em) {
   .hero.home {
-    background: radial-gradient(97.05% 97.05% at 50% 2.95%, rgba(87, 54, 151, 0.47) 19.45%, rgba(96, 60, 147, 0.28) 47.76%, rgba(255, 163, 75, 0.15) 77.05%, rgba(255, 163, 75, 0) 99.48%), url("../media/doctor-patient-interpreter Imagexsm.jpg");
+    background: radial-gradient(97.05% 97.05% at 50% 2.95%, rgba(87, 54, 151, 0.47) 19.45%, rgba(96, 60, 147, 0.28) 47.76%, rgba(255, 163, 75, 0.15) 77.05%, rgba(255, 163, 75, 0) 99.48%), url("../media/doctor-patient-interpreter xsm1.jpg");
     background-origin: border-box, content-box;
     background-blend-mode: multiply;
     background-position-x: center;
     background-attachment: unset;
-    background-position-y: 20%;
+    background-position-y: 10%;
     background-repeat: no-repeat;
     background-size: cover;
     background-size: 130%;
@@ -555,7 +584,7 @@ section {
 }
 @media (max-width: 50em) {
   .hero.home {
-    background: radial-gradient(97.05% 97.05% at 50% 2.95%, rgba(87, 54, 151, 0.47) 19.45%, rgba(96, 60, 147, 0.28) 47.76%, rgba(255, 163, 75, 0.15) 77.05%, rgba(255, 163, 75, 0) 99.48%), url("../media/doctor-patient-interpreter Imagexsm.jpg");
+    background: radial-gradient(97.05% 97.05% at 50% 2.95%, rgba(87, 54, 151, 0.47) 19.45%, rgba(96, 60, 147, 0.28) 47.76%, rgba(255, 163, 75, 0.15) 77.05%, rgba(255, 163, 75, 0) 99.48%), url("../media/doctor-patient-interpreter xsm1.jpg");
     background-blend-mode: multiply;
     background-origin: border-box, content-box;
     background-position-x: center;
@@ -563,13 +592,13 @@ section {
     background-position-y: 10%;
     background-repeat: no-repeat;
     background-size: cover;
-    background-size: 150vw;
+    background-size: 130%;
     color: white;
   }
 }
 @media (max-width: 37.5em) {
   .hero.home {
-    background: radial-gradient(97.05% 97.05% at 50% 2.95%, rgba(87, 54, 151, 0.47) 19.45%, rgba(96, 60, 147, 0.28) 47.76%, rgba(255, 163, 75, 0.15) 77.05%, rgba(255, 163, 75, 0) 99.48%), url("../media/doctor-patient-interpreter Imagexsm.jpg");
+    background: radial-gradient(97.05% 97.05% at 50% 2.95%, rgba(87, 54, 151, 0.47) 19.45%, rgba(96, 60, 147, 0.28) 47.76%, rgba(255, 163, 75, 0.15) 77.05%, rgba(255, 163, 75, 0) 99.48%), url("../media/doctor-patient-interpreter xsm1.jpg");
     background-blend-mode: multiply;
     background-origin: border-box, content-box;
     background-position-x: center;
@@ -596,7 +625,7 @@ section {
   margin-top: 10px;
   margin-bottom: 10px;
 }
-@media (max-width: 37.5em) {
+@media (max-width: 50em) {
   .hero.home .foreground .content h1, .hero.home .foreground .content h2 {
     color: white;
     text-align: center;
@@ -606,14 +635,15 @@ section {
 .hero.home .foreground .content h2 {
   font-size: var(--fs-500);
 }
-.hero.home .foreground .content .button-container {
+
+.button-container {
   display: flex;
   flex-direction: row;
 }
-.hero.home .foreground .content .button-container a + button {
+.button-container a + button {
   margin-left: 1em;
 }
-.hero.home .foreground .content .button-container * {
+.button-container * {
   text-decoration: none;
 }
 
@@ -719,6 +749,10 @@ section {
   }
 }
 
+.lets-talk {
+  display: grid;
+  place-items: center;
+}
 .lets-talk h1, .lets-talk p {
   margin-bottom: 0.3em;
 }
@@ -768,61 +802,61 @@ section {
   fill: white;
 }
 
-.about {
+.about, .services {
   margin-bottom: 1rem;
   padding-top: calc(75px + 1rem);
 }
-.about section {
+.about section, .services section {
   padding-block: 0;
   text-align: left;
   margin-bottom: 1rem;
 }
-.about h2 {
+.about h2, .services h2 {
   font-size: var(--fs-600);
 }
-.about h4 {
+.about h4, .services h4 {
   font-size: var(--fs-400);
 }
-.about h2, .about h4 {
+.about h2, .about h4, .services h2, .services h4 {
   color:  #573697 ;
 }
 @media (prefers-color-scheme: dark) {
-  .about h2, .about h4 {
+  .about h2, .about h4, .services h2, .services h4 {
     color:  #573697 ;
   }
 }
-.about .name {
+.about .name, .services .name {
   border-bottom: 3px solid;
   border-color:  #573697 ;
   margin-bottom: 1em;
 }
 @media (prefers-color-scheme: dark) {
-  .about .name {
+  .about .name, .services .name {
     border-color:  #573697 ;
   }
 }
-.about .description {
+.about .description, .services .description {
   display: flex;
   flex-direction: row;
   gap: 20px;
   text-align: left;
 }
 @media (max-width: 50em) {
-  .about .description {
+  .about .description, .services .description {
     flex-direction: column;
   }
 }
-.about .description .box {
+.about .description .box, .services .description .box {
   margin: auto 0;
   display: grid;
   place-items: center;
   height: stretch;
 }
-.about .description .box p {
+.about .description .box p, .services .description .box p {
   padding-inline: 1rem;
   margin-bottom: 1em;
 }
-.about .description .box .img-container {
+.about .description .box .img-container, .services .description .box .img-container {
   height: fit-content;
   margin: auto 0;
   position: relative;
@@ -830,18 +864,18 @@ section {
   place-items: center;
 }
 @media (max-width: 50em) {
-  .about .description .box .img-container {
+  .about .description .box .img-container, .services .description .box .img-container {
     width: 30rem;
   }
 }
-.about .description .box .img-container img {
+.about .description .box .img-container img, .services .description .box .img-container img {
   display: inline;
   width: 100%;
 }
-.about .description .box ul {
+.about .description .box ul, .services .description .box ul {
   padding: 0;
 }
-.about .description .box ul li {
+.about .description .box ul li, .services .description .box ul li {
   display: block;
   list-style: none;
 }

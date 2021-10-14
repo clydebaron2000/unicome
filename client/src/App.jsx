@@ -9,6 +9,7 @@ import ModalButton from "./components/ModalAndButton";
 
 const Home = lazy((_) => import("./pages/home"))
 const About = lazy((_) => import("./pages/about"))
+const Services = lazy((_) => import("./pages/services"))
 
 function App() {
 	if(false)
@@ -39,7 +40,7 @@ function App() {
 				<Switch>
 					<Route path='/' exact component={Home} />
 					<Route path='/about' exact component={About} />
-					<Route path='/services' exact component={About} />
+					<Route path='/services' exact component={Services} />
 					<Route component={Home} />
 				</Switch>
 			</Suspense>

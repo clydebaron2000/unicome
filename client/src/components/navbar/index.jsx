@@ -11,7 +11,7 @@ export default function Navbar(props) {
     const location = useLocation();
     const menu_bar={
         "/#":'Home',
-        '/#services':'Services',
+        '/services':'Services',
         '/about':'About',
     }
     useEffect(_=>{
