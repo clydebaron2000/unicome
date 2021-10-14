@@ -13,7 +13,7 @@ export default function Home(){
                     <h1>you need it most</h1>
                     <h2>Certified Medical-Legal Interpreter</h2>
                     <div className='button-container'>
-                        <a  href='/#services'>
+                        <a  href='/services'>
                             <BounceButton className='action-button'>
                                 my services
                             </BounceButton>
@@ -83,7 +83,7 @@ export default function Home(){
                     <MedicalLegal/>
                 </div>
                 <div className='box'>
-                    <h3>A Certified Interpreter is Required</h3>
+                    <h3>A Certified Interpreter <br/> is Required</h3>
                     <div>
                         <p>
                             For Worker’s Compensation related medical treatment appointments and medical legal exams, the interpreter providing the services for such type of
@@ -100,13 +100,15 @@ export default function Home(){
         </section>
         <section className='lets-talk'>
             <h1>Let's Talk D'Lingo!</h1>
-            <p>
+            {/* <p>
                 Medical Appointments
-            </p>
-            <div>
-                <p id="services">
-                    QME, IME, AME, PQME, Deposition, Administrative Hearing
-                </p>
+            </p> */}
+            <div className='button-container'>
+                <a  href='/services'>
+                    <BounceButton className='action-button'>
+                        my services
+                    </BounceButton>
+                </a>
                 <ModalButton>
                     contact me
                 </ModalButton>
