@@ -4,6 +4,9 @@ import Profile from "../../media/Glen Lubao 08252021 57.jpg";
 import Footer from "../../components/footer";
 import BounceButton from "../../components/ActionButton";
 import ModalButton from "../../components/ModalAndButton";
+import stripes from '../../media/stripes.png'
+const Stripes = ()=> <img className='stripes' src={stripes} alt='stripes' width='fill'/>
+
 export default function Home(){
     return <>
         <div className='hero home'>
@@ -58,7 +61,8 @@ export default function Home(){
                 </div>
             </div>
         </div>
-        <section className='why-choose-certified'>
+        <section className='why-choose-certified stripped-card'>
+            <Stripes/>
             <h2>
                 Why Choose Certified?
             </h2>
@@ -97,6 +101,7 @@ export default function Home(){
                     </div>
                 </div>
             </div>
+            <Stripes/>
         </section>
         <section className='lets-talk'>
             <h1>Let's Talk D'Lingo!</h1>
