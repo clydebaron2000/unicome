@@ -1,10 +1,16 @@
 import Footer from "../../components/footer"
 import  profile from "../../media/Glen Lubao 08252021 57.jpg"
+import stripes from '../../media/stripes.png'
+const Stripes = ()=> <img className='stripes' src={stripes} alt='stripes' width='fill'/>
+
 export default function About(props){
     return <>
     <div className='about'>
+        <div className='stripped-card'>
+        <Stripes/>
         <section>
                 <div className='name'>
+                    {/* TODO: title to left, scales to right spanning 2 lines */}
                     <h1>
                         Glen Lubao
                     </h1>
@@ -115,6 +121,8 @@ export default function About(props){
                 </ul>
             </div>
         </section>
+        <Stripes/>
+        </div>
     </div>
     <Footer/>
     </>

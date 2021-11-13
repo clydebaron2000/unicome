@@ -93,6 +93,7 @@ section{
 .stripped-card{
   @include theme('background-color',$color2);
   background: linear-gradient(10deg, #ffaa00, #ff6a00);
+  // TODO :lighten the color
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -201,7 +202,7 @@ section{
   width: stretch;
   left:0;
   top:0;
-  @include theme('background-color', $background3 ,$a:.85);
+  @include theme('background-color', $background3);
   color:white;
   backdrop-filter: blur(2px);
   padding:0px 1em;
@@ -660,6 +661,9 @@ section{
       width:40;
       height:40;
       margin-right:1em; 
+      #background{
+        @include theme('fill',$color1);
+      }
       &+div{
         font-size: var(--fs-600);
         line-height: var(--fs-600);
