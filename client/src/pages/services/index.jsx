@@ -10,6 +10,7 @@ export default function About(props){
                 Certified Language Interpretation Services <br/> (Tagalog-Ilonggo-English)
             </h1>
             <h2>
+                {/* insert scale here */}
                 On-Site/In-Person | Virtual/Remote & Telehealth
             </h2>
             <section>
@@ -46,7 +47,7 @@ export default function About(props){
                 </h3>
                 <ul>
                     <li>
-                        Small-Group Facilitator with FREE Therapeutic Spiritual Health Class (4-6 Sessions, 1 hr./Session/Week)
+                        Small-Group Facilitator with Therapeutic Spiritual Health Class (4-6 Sessions, 1 hr./Session/Week)
                     </li>
                     <li>
                         Wedding Ceremony Officiant (On-site only)
