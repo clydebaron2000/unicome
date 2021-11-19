@@ -1,6 +1,7 @@
 import Footer from "../../components/footer"
 import  profile from "../../media/Glen Lubao 08252021 57.jpg"
 import stripes from '../../media/stripes.png'
+import { ReactComponent as Medlegal } from '../../media/legal medical.svg'
 const Stripes = ()=> <img className='stripes' src={stripes} alt='stripes' width='fill'/>
 
 export default function About(props){
@@ -10,12 +11,13 @@ export default function About(props){
         <Stripes/>
         <section>
                 <div className='name'>
-                    {/* TODO: title to left, scales to right spanning 2 lines */}
                     <h1>
-                        Glen Lubao
+                        Glen Lubao 
+                        <Medlegal style={{display:'inline',paddingInline:'5px',width:'var(--fs-700)',height:'auto'}}/>
+                        {/* TODO: title to left, scales to right spanning 2 lines */}
                     </h1>
                     <h2>
-                        Certified Interpreter
+                        Certified Medical Interpreter
                     </h2>
                 </div>
                 <div className='description'>
