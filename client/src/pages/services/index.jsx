@@ -1,5 +1,7 @@
 import Footer from "../../components/footer"
 import stripes from '../../media/stripes.png'
+import { ReactComponent as Medlegal } from '../../media/legal medical.svg'
+
 const Stripes = ()=> <img className='stripes' src={stripes} alt='stripes' width='fill'/>
 export default function About(props){
     return <>
@@ -10,7 +12,7 @@ export default function About(props){
                 Certified Language Interpretation Services <br/> (Tagalog-Ilonggo-English)
             </h1>
             <h2>
-                {/* insert scale here */}
+                <Medlegal style={{display:'inline',paddingInline:'5px',width:'var(--fs-500)',height:'auto'}}/>
                 On-Site/In-Person | Virtual/Remote & Telehealth
             </h2>
             <section>
