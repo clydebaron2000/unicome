@@ -9,10 +9,10 @@ export default function About(props){
         <div className='stripped-card'>
             <Stripes/>
             <h1>
+                <Medlegal style={{display:'inline',paddingInline:'5px',width:'var(--fs-700)',height:'auto'}}/>
                 Certified Language Interpretation Services <br/> (Tagalog-Ilonggo-English)
             </h1>
             <h2>
-                <Medlegal style={{display:'inline',paddingInline:'5px',width:'var(--fs-500)',height:'auto'}}/>
                 On-Site/In-Person | Virtual/Remote & Telehealth
             </h2>
             <section>

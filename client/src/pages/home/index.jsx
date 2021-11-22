@@ -87,7 +87,7 @@ export default function Home(){
                     <MedicalLegal/>
                 </div>
                 <div className='box'>
-                    <h3>A Certified Interpreter <br/> is Required</h3>
+                    <h3>A Certified Interpreter is Required</h3>
                     <div>
                         <p>
                             For Worker’s Compensation related medical treatment appointments and medical legal exams, the interpreter providing the services for such type of

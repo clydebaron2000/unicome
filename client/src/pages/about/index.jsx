@@ -13,10 +13,10 @@ export default function About(props){
                 <div className='name'>
                     <h1>
                         Glen Lubao 
-                        <Medlegal style={{display:'inline',paddingInline:'5px',width:'var(--fs-700)',height:'auto'}}/>
                         {/* TODO: title to left, scales to right spanning 2 lines */}
                     </h1>
                     <h2>
+                        <Medlegal style={{display:'inline',paddingInline:'5px',width:'var(--fs-700)',height:'auto'}}/>
                         Certified Medical Interpreter
                     </h2>
                 </div>
