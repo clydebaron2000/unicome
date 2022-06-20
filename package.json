@@ -1,7 +1,7 @@
 {
   "name": "unicome",
   "version": "1.0.0",
-  "description": "United Communications Enterprise deployable website",
+  "description": "United Communication Enterprise deployable website",
   "main": "server.js",
   "scripts": {
     "start": "if-env NODE_ENV=production && npm run start:prod || npm run start:dev",

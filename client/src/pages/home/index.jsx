@@ -33,7 +33,7 @@ export default function Home(){
                 <div className='content'>
                     <p>
                         As a spoken language interpreter, I have recognized the need and importance
-                        to be understood and have one’s thoughts or feelings validated. I uphold and
+                        to be understood and have one's thoughts or feelings validated. I uphold and
                         support the language access rights as mandated in Title VI of the Civil Rights
                         Act of 1964.
                     </p>
@@ -71,13 +71,13 @@ export default function Home(){
                     <h3>Professionalism Balances the Scale</h3>
                     <div>
                         <p>
-                            A language interpreter’s certification requires an education, rigorous testing,
-                            training, and skills to get certified. However, there’s more to it that counts
+                            A language interpreter's certification requires an education, rigorous testing,
+                            training, and skills to get certified. However, there's more to it that counts
                             than the certification number.
                         </p>
                         <p>
                             The professional expertise of certified medical-legal interpreters adheres to
-                            their standards of practice & code of ethics. They balance the scale of the
+                            their standards of practice and code of ethics. They balance the scale of the
                             health and well-being of the limited English proficient person and the integrity
                             of professional opinions and judgments by both the healthcare and legal counselor providers.
                         </p>
@@ -90,9 +90,9 @@ export default function Home(){
                     <h3>A Certified Interpreter is Required</h3>
                     <div>
                         <p>
-                            For Worker’s Compensation related medical treatment appointments and medical legal exams, the interpreter providing the services for such type of
+                            For Worker's Compensation related medical treatment appointments and medical legal exams, the interpreter providing the services for such type of
                             appointments must be “Certified” and meet the qualifications as mandated by
-                            the law under the California Code of Regulations, Title 8, Section 9795.1.5(a)(1) and 9795.1.6(a)92). 
+                            the law under the California Code of Regulations, Title 8, Section 9795.1.5(a)(1) and 9795.1.6(a)92. 
                         </p>
                         <p>
                             Their names must be listed in the registry for Certification Commission for Healthcare Interpreters (CCHI) or National
