@@ -105,7 +105,7 @@ export default function About(props){
         </section>
         <section>
             <div>
-                <h3>Membership and Affiliation</h3>
+                <h3>Professional Affiliations</h3>
                 <ul>
                     <li>
                         <h4>San Diego Certified Medical Interpreters Network, SDCMIN</h4>
@@ -118,10 +118,6 @@ export default function About(props){
                     <li>
                         <h4>National Council on Interpreting in Health Care, NCIHC</h4>
                         <p>Washington, DC - Member</p>
-                    </li>
-                    <li>
-                        <h4>California Certified Interpreters Association</h4>
-                        <p>Member</p>
                     </li>
                 </ul>
             </div>
