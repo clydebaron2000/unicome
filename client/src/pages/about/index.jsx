@@ -108,8 +108,8 @@ export default function About(props){
                 <h3>Professional Affiliations</h3>
                 <ul>
                     <li>
-                        <h4>San Diego Certified Medical Interpreters Network, SDCMIN</h4>
-                        <p>Former Board Member</p>
+                        <h4>California Certified Medical Interpreters Association CCMIA</h4>
+                        <p>Member</p>
                     </li>
                     <li>
                         <h4>California Federation of Interpreters, CFI</h4>
