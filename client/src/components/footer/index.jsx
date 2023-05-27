@@ -1,3 +1,4 @@
+import React from 'react'
 import { ReactComponent as Logo } from '../../logo.svg'
 import { ReactComponent as Email } from '../../media/email.svg'
 import { ReactComponent as Phone } from '../../media/phone.svg'

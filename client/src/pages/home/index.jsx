@@ -51,7 +51,6 @@ export default function Home(){
                     <div className='info'>
                         <h3>Glen Lubao, CoreCHI</h3>
                         <h5>Certified Medical Interpreter</h5>
-                        <div>Tagalog-English</div>
                         <Link exact to ="/about" href='/about'>
                             <BounceButton className='secondary-button'>
                                 Learn more

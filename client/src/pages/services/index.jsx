@@ -10,8 +10,11 @@ export default function About(props){
             <Stripes/>
             <h1>
                 <Medlegal style={{display:'inline',paddingInline:'5px',width:'var(--fs-700)',height:'auto'}}/>
-                Certified Language Interpretation Services <br/> (Tagalog-Ilonggo-English)
+                Certified Language Interpretation Services <br/> (Tagalog-Spanish-Farsi)
             </h1>
+            <h4>
+            Other non-certified spoken language services: Pashto, Dari, and Ilongo or Hiligaynon
+            </h4>
             <h2>
                 On-Site/In-Person | Virtual/Remote & Telehealth
             </h2>
@@ -49,13 +52,13 @@ export default function About(props){
                 </h3>
                 <ul>
                     <li>
-                        Small-Group Facilitator with Therapeutic Spiritual Health Class (4-6 Sessions, 1 hr./Session/Week)
+                        Small Group Facilitator: Therapeutic Spiritual Health class (4-6 sessions, 1 hr/session/week), Virtual or On-site. Recommended for injured workers who are experiencing chronic pain with symptoms of depression, anxiety, and hopelessness. Language specifics: English/Tagalog.
                     </li>
                     <li>
-                        Wedding Ceremony Officiant (On-site only)
+                        Wedding Ceremony Officiant (On-site only). Language specifics: English/Tagalog
                     </li>
                     <li>
-                        Funeral Celebrant Minister: Celebration of Life Memorial Services
+                        Funeral Celebrant Officiant (On-site only). Language specifics: English/Tagalog
                     </li>
                 </ul>
             </section>

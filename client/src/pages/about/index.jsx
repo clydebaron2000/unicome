@@ -13,7 +13,6 @@ export default function About(props){
                 <div className='name'>
                     <h1>
                         Glen Lubao 
-                        {/* TODO: title to left, scales to right spanning 2 lines */}
                     </h1>
                     <h2>
                         <Medlegal style={{display:'inline',paddingInline:'5px',width:'var(--fs-700)',height:'auto'}}/>
@@ -29,7 +28,7 @@ export default function About(props){
                     </div>
                     <div className='box'>
                         <p>
-                            Almost 10 years of professional experience in providing medical and medical-legal interpretation language services in specific areas of healthcare, Industrial labor (Worker’s Compensation), education, public and social services. 
+                            Over 10 years of professional experience in providing medical and medical-legal interpretation language services in specific areas of healthcare, Industrial labor (Worker’s Compensation), education, public and social services. 
                         </p>
                         <p>
                             Experienced Certified Medical Interpreter with a demonstrated history of working in public relations, healthcare, spiritual care, administrative hearings & language services. Purpose driven in teaching, volunteering, community service, humanitarian service, and charity. Compassion is a passion to assist the poor, the sick & the hurting.
@@ -98,7 +97,7 @@ export default function About(props){
                 <h3>Certification</h3>
                 <ul>
                     <li>
-                        <h4>CoreCHI Cert. No. xxx825 (Exp. 06/28/2022)</h4>
+                        <h4>CoreCHI Cert. No. xxx825 (Exp.  06/27/2026)</h4>
                         <p>Certification Commission for Healthcare Interpreters (CCHI), Washington, D.C.</p>
                     </li>
                 </ul>
@@ -106,7 +105,7 @@ export default function About(props){
         </section>
         <section>
             <div>
-                <h3>Professional Affiliations</h3>
+                <h3>Membership and Affiliation</h3>
                 <ul>
                     <li>
                         <h4>San Diego Certified Medical Interpreters Network, SDCMIN</h4>
@@ -118,7 +117,11 @@ export default function About(props){
                     </li>
                     <li>
                         <h4>National Council on Interpreting in Health Care, NCIHC</h4>
-                        <p>Washington, DC – Member</p>
+                        <p>Washington, DC - Member</p>
+                    </li>
+                    <li>
+                        <h4>California Certified Interpreters Association</h4>
+                        <p>Member</p>
                     </li>
                 </ul>
             </div>
