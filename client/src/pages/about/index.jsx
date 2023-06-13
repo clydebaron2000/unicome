@@ -2,7 +2,8 @@ import Footer from "../../components/footer"
 import  profile from "../../media/Glen Lubao 08252021 57.jpg"
 import stripes from '../../media/stripes.png'
 import { ReactComponent as Medlegal } from '../../media/legal medical.svg'
-const Stripes = ()=> <img className='stripes' src={stripes} alt='stripes' width='fill'/>
+// const Stripes = ()=> <img className='stripes' src={stripes} alt='stripes' width='fill'/>
+const Stripes = ()=> <div className='stripes' style={{backgroundImage:'url('+stripes+')',height:'50px',width:'fill',backgroundRepeatX:'repeat'}} alt='stripes'/>
 
 export default function About(props){
     return <>

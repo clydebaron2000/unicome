@@ -1,11 +1,15 @@
 import { NavLink as Link } from "react-router-dom"
 import {ReactComponent as MedicalLegal} from "../../media/legal medical.svg";
 import Profile from "../../media/Glen Lubao 08252021 57.jpg";
+import smallProfile from "../../media/Glen Lubao001 Psport.jpg";
 import Footer from "../../components/footer";
 import BounceButton from "../../components/ActionButton";
 import ModalButton from "../../components/ModalAndButton";
 import stripes from '../../media/stripes.png'
-const Stripes = ()=> <img className='stripes' src={stripes} alt='stripes' width='fill'/>
+
+
+// const Stripes = ()=> <img className='stripes' src={stripes} alt='stripes' width='fill'/>
+const Stripes = ()=> <div className='stripes' style={{backgroundImage:'url('+stripes+')',height:'50px',width:'fill',backgroundRepeatX:'repeat'}} alt='stripes'/>
 
 export default function Home(){
     return <>
@@ -46,14 +50,14 @@ export default function Home(){
                 </div>
                 <div className='profile'>
                     <div className='img-container'>
-                        <img src={Profile} alt='Glen Lubao'/>
+                        <img src={smallProfile} alt='Glen Lubao' width='120px' height='120px'/>
                     </div>
                     <div className='info'>
                         <h3>Glen Lubao, CoreCHI</h3>
-                        <h5>Certified Medical Interpreter</h5>
+                        <h4>Certified Medical Interpreter</h4>
                         <Link exact to ="/about" href='/about'>
                             <BounceButton className='secondary-button'>
-                                Learn more
+                                Learn more about us
                             </BounceButton>
                         </Link>
                     </div>

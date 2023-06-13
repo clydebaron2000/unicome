@@ -47,7 +47,7 @@ export default function ModalButton({ children}) {
                             <Phone/>
                             <div>+(619) 410 4277</div>
                         </motion.a>
-                        <motion.a href='https://www.linkedin.com/in/Glen-Lubao-dba-UNICOME/'
+                        <motion.a href='https://www.linkechdin.com/in/Glen-Lubao-dba-UNICOME/'
                             whileHover={{scale:1.1}}
                             whileTap={{scale:0.9}}
                         >
