@@ -398,6 +398,10 @@ section {
 }
 .navbar .container .menu {
   display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 24em;
 }
 @media (max-width: 50em) {
   .navbar .container .menu {
@@ -502,6 +506,7 @@ section {
 .navbar .container .menu button.action-button {
   margin: auto 0;
   height: fit-content;
+  text-wrap: nowrap;
 }
 @media (max-width: 50em) {
   .navbar .container .menu button.action-button {
