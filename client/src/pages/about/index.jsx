@@ -45,10 +45,6 @@ export default function About(props){
                             medical examination, imaging, MRI CT X-Ray, nerve tests, EEG, EKG.
                             Translation of medical consent forms, advance directives,
                             compromise & release (C&R), and court-recorded transcripts.
-                            {/* were mostly
-                            worker’s compensation related cases like medical-legal exams, QME, IME, AME
-                            & PQME including administrative hearings & depositions but not limited to the
-                            following. */}
                         </p>
                         <p>
                             I am privileged and honored to be one among the 5 Certified Healthcare Interpreters in the United States at the present time for Tagalog language and sole provider of certified medical interpretation services in Greater San Diego, California.

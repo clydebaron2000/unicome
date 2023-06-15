@@ -641,11 +641,14 @@ section {
 
 .button-container {
   margin-top: 3%;
-  display: flex;
-  flex-direction: row;
-}
-.button-container a + button {
-  margin-left: 1em;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 75%;
+    align-content: space-around;
+    align-items: center;
+    height: 100%;
 }
 .button-container * {
   text-decoration: none;
@@ -688,11 +691,12 @@ section {
   margin: 0;
 }
 .mini-about .profile {
-  display: grid;
-  grid-template-columns: 1fr 1.5fr;
-  grid-gap: 20px;
+  display: flex;
   align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
   justify-content: center;
+  max-width: 90%;
 }
 .mini-about .profile .img-container {
   margin: 0 auto;
@@ -704,7 +708,7 @@ section {
   place-items: center;
 }
 .mini-about .profile .img-container img {
-  display: inline;
+  height: 100%;
   width: 100%;
 }
 .mini-about .profile .info {
@@ -773,44 +777,46 @@ section {
   fill: royalblue;
 }
 
-.footer {
+.{
   width: stretch;
   padding: 2em;
   background-color:  #573697 ;
   color: white;
+  flex-wrap: wrap;
 }
 @media (prefers-color-scheme: dark) {
-  .footer {
+  .{
     background-color:  #573697 ;
   }
 }
-.footer, .footer div {
+.footer, .div {
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-direction: row;
+  flex-wrap: wrap;
 }
-.footer .logo, .footer div .logo {
+..logo, .div .logo {
   width: 40;
   height: 40;
   margin-right: 1em;
 }
-.footer .logo #background, .footer div .logo #background {
+..logo #background, .div .logo #background {
   fill:  #573697 ;
 }
 @media (prefers-color-scheme: dark) {
-  .footer .logo #background, .footer div .logo #background {
+  ..logo #background, .div .logo #background {
     fill:  #573697 ;
   }
 }
-.footer .logo + div, .footer div .logo + div {
+..logo + div, .div .logo + div {
   font-size: var(--fs-600);
   line-height: var(--fs-600);
 }
-.footer .icons * + *, .footer div .icons * + * {
+..icons * + *, .div .icons * + * {
   margin-left: 1rem;
 }
-.footer .icons * * > *, .footer div .icons * * > * {
+..icons * * > *, .div .icons * * > * {
   fill: white;
 }
 

@@ -16,8 +16,7 @@ export default function Home(){
         <div className='hero home'>
             <div className='foreground'>
                 <div className='content'>
-                    <h1>Understanding when</h1>
-                    <h1>you need it most</h1>
+                    <h1>Understanding when <br></br>you need it most</h1>
                     <h2>Certified Medical-Legal Interpreter</h2>
                     <div className='button-container'>
                         <a  href='/services'>
@@ -50,7 +49,7 @@ export default function Home(){
                 </div>
                 <div className='profile'>
                     <div className='img-container'>
-                        <img src={smallProfile} alt='Glen Lubao' width='120px' height='120px'/>
+                        <img src={smallProfile} alt='Glen Lubao' width='238px' height='238px'/>
                     </div>
                     <div className='info'>
                         <h3>Glen Lubao, CoreCHI</h3>
@@ -87,7 +86,7 @@ export default function Home(){
                     </div>
                 </div>
                 <div className='box'>
-                    <MedicalLegal/>
+                    <MedicalLegal class='medical-legal' style={{width: '100%'}}/>
                 </div>
                 <div className='box'>
                     <h3>A Certified Interpreter is Required</h3>

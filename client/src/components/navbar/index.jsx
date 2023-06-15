@@ -24,7 +24,7 @@ export default function Navbar(props) {
     return (
         <div className="navbar">
         <div className='container'>
-            <a className='brand' href="/#">
+            <a className='brand' href="/#" aria-label="Unicome Logo">
                 <Logo className="logo"/>
                 <div className='logo-name'>
                     <div className='main-text'>
@@ -35,7 +35,7 @@ export default function Navbar(props) {
                     </div>
                 </div>
             </a> 
-            <button className='collapse-btn ' aria-controls="nav"
+            <button className='collapse-btn ' aria-controls="nav" aria-label="menu hamburger"
                 onClick={_=>setCollapsed(!collapsed)}
             >
                 <MenuIcon/>
@@ -51,7 +51,7 @@ export default function Navbar(props) {
                                 exact to={key}
                                 href={key}
                             >
-                                <BounceButton>
+                                <BounceButton ariaLabel="menu button">
                                     {menu_bar[key]}
                                 </BounceButton>
                             </Link>
