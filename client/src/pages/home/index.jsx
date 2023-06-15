@@ -106,7 +106,7 @@ export default function Home(){
             <Stripes/>
         </section>
         <section className='lets-talk'>
-            <h1>Let's Talk D'Lingo!</h1>
+            <h2>Let's Talk D'Lingo!</h2>
             {/* <p>
                 Medical Appointments
             </p> */}
