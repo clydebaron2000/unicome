@@ -696,7 +696,6 @@ section {
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
-  max-width: 90%;
 }
 .mini-about .profile .img-container {
   margin: 0 auto;
@@ -777,7 +776,7 @@ section {
   fill: royalblue;
 }
 
-.{
+.footer {
   width: stretch;
   padding: 2em;
   background-color:  #573697 ;
@@ -785,38 +784,38 @@ section {
   flex-wrap: wrap;
 }
 @media (prefers-color-scheme: dark) {
-  .{
+  .footer {
     background-color:  #573697 ;
   }
 }
-.footer, .div {
+.footer, .footer div {
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-direction: row;
   flex-wrap: wrap;
 }
-..logo, .div .logo {
+.footer .logo, .footer div .logo {
   width: 40;
   height: 40;
   margin-right: 1em;
 }
-..logo #background, .div .logo #background {
+.footer .logo #background, .footer div .logo #background {
   fill:  #573697 ;
 }
 @media (prefers-color-scheme: dark) {
-  ..logo #background, .div .logo #background {
+  .footer .logo #background, .footer div .logo #background {
     fill:  #573697 ;
   }
 }
-..logo + div, .div .logo + div {
+.footer .logo + div, .footer div .logo + div {
   font-size: var(--fs-600);
   line-height: var(--fs-600);
 }
-..icons * + *, .div .icons * + * {
+.footer .icons * + *, .footer div .icons * + * {
   margin-left: 1rem;
 }
-..icons * * > *, .div .icons * * > * {
+.footer .icons * * > *, .footer div .icons * * > * {
   fill: white;
 }
 
